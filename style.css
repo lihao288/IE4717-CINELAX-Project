@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poiret+One&display=swap");
+
+:root {
+  --ff-logo: "Poiret One", cursive;
+  --ff-prm: "Montserrat", sans-serif;
+
+  --bg-color: hsl(218, 18%, 16%);
+  --bg-color-light: hsl(217, 10%, 25%);
+  --bg-color-accent: hsl(42, 100%, 71%);
+  --text-color: hsl(0, 0%, 93%);
+
+  --fs-classification: 0.8rem;
+  --fs-p: 1rem;
+  --fs-h1: 1.5rem;
+  --fs-h2: 1.2rem;
+  --fs-logo: 2.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff-prm);
+}
+
+header {
+  background-color: var(--bg-color-accent);
+}
+
+nav {
+  max-height: 150px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-heading {
+  font-family: var(--ff-logo);
+  text-transform: uppercase;
+  margin-right: 50px;
+  font-size: var(--fs-logo);
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0 30px;
+  color: var(--bg-color-light);
+  font-size: var(--fs-h1);
+}
+
+.container {
+  width: 100%;
+
+  margin: 0 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.tab {
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-color);
+}
+
+.popular {
+  padding: 0 30px;
+}
+
+.selected {
+  background-color: var(--bg-color-accent);
+  color: var(--bg-color-light);
+  border-radius: 10px;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--bg-color-light);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.movie-poster img {
+  width: 100%;
+}
+
+.movie-title {
+  padding: 10px 0;
+  font-size: var(--fs-h2);
+}
+
+.classification {
+  background-color: var(--bg-color-accent);
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: var(--fs-classification);
+  border-radius: 5px;
+  color: var(--bg-color);
+}
+
+.duration {
+  padding: 20px 0;
+}
+
+.buy-ticket {
+  font-family: var(--ff-prm);
+  padding: 5px 10px;
+  background-color: var(--bg-color-accent);
+  border: none;
+  border-radius: 5px;
+}
