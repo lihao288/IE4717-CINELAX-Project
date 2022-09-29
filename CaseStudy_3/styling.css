@@ -1,0 +1,134 @@
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #d8cf99;
+}
+
+header{ 
+    background-color: #cca966;
+text-align: center;
+}
+
+#wrapper { 
+    background-color: #e2d1b2; 
+    width: 80%;
+    margin: auto;
+    min-width: 800px;
+}
+
+#leftcolumn { 
+    float: left;
+    width: 150px;
+}
+
+#rightcolumn { 
+    margin-left: 155px;
+    background-color: #f5f4dc;
+    color: #584137;
+} 
+
+nav ul {	
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #754e46;
+    margin: 12px;
+}
+
+.content {
+    padding: 5px 20px;
+    color: #754e46;
+}
+
+h2 {
+    color: #290106;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px;
+}
+
+#floatleft { 
+    margin: 5px 40px;
+    float: left;
+}
+
+.content p {
+    padding: 20px 90px;
+} 
+
+.description {
+    list-style-image: url(coffeecup.png);
+    list-style-position: inside;
+}
+
+footer {
+    background-color: #d1b38e;
+    font-size: 80%;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #745228;
+}
+
+div table {
+    margin: auto;
+    border: none;
+    width: 500px;
+    /* border-spacing: 5; */
+    padding: 15px 5px 15px;
+}
+
+tr:first-of-type {
+    background-color: #d0b38f;
+    color: #584137;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #d0b38f;
+}
+
+td {
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    border-style: none;
+    color: #591810;
+}
+
+#coffeetype {
+    font-weight: bold;
+    padding-left: 10px;
+    text-align: center;
+    color: #591810;
+}
+
+#musicianphoto {
+    padding: 20px;
+}
+
+#monthheader {
+    text-align: left;
+}
+
+form {
+    font-family: Arial, sans-serif;
+    width: 350px;
+    padding: 30px 10px;
+  }
+
+label {
+    float: left;
+    clear: left;
+    display: block;
+    width: 100px;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 2px;
+}
+
+input, textarea {
+    /* margin-top: 1px; */
+    display: block;
+}
