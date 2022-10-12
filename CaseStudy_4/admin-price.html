@@ -53,25 +53,26 @@
                   House blended coffee infused into a smooth, steamed milk.
                   <br />
                   <label>
-                    <input
-                      type="radio"
-                      name="laitButton"
-                      value="2.00"
-                      onclick="laitChoice('single')"
-                      onchange="computeCost()"
-                      checked
-                    />
-                    <span class="coffee-price">Single $2.00</span>
+                    <span class="coffee-price"
+                      >Single $<input
+                        type="text"
+                        size="2"
+                        name="lait-single-price"
+                        id="lait-single-price"
+                        value="2.00"
+                        disabled
+                    /></span>
                   </label>
                   <label>
-                    <input
-                      type="radio"
-                      name="laitButton"
-                      value="3.00"
-                      onclick="laitChoice('double')"
-                      onchange="computeCost()"
-                    />
-                    <span class="coffee-price">Double $3.00</span>
+                    <span class="coffee-price"
+                      >Double $<input
+                        type="text"
+                        size="2"
+                        name="lait-double-price"
+                        id="lait-double-price"
+                        value="3.00"
+                        disabled
+                    /></span>
                   </label>
                 </td>
               </tr>
@@ -84,29 +85,31 @@
                   Sweetened espresso blended with icy-cold milk and served in a
                   chilled glass. <br />
                   <label>
-                    <input
-                      type="radio"
-                      name="cappuccinoButton"
-                      value="4.75"
-                      onclick="cappuccinoChoice('single')"
-                      onchange="computeCost()"
-                      checked
-                    />
-                    <span class="coffee-price">Single $4.75</span>
+                    <span class="coffee-price"
+                      >Single $<input
+                        type="text"
+                        size="2"
+                        name="cappuccino-single-price"
+                        id="cappuccino-single-price"
+                        value="4.75"
+                        disabled
+                    /></span>
                   </label>
                   <label>
-                    <input
-                      type="radio"
-                      name="cappuccinoButton"
-                      value="5.75"
-                      onclick="cappuccinoChoice('double')"
-                      onchange="computeCost()"
-                    />
-                    <span class="coffee-price">Double $5.75</span>
+                    <span class="coffee-price"
+                      >Double $<input
+                        type="text"
+                        size="2"
+                        name="cappuccino-double-price"
+                        id="cappuccino-double-price"
+                        value="5.75"
+                        disabled
+                    /></span>
                   </label>
                 </td>
               </tr>
             </table>
+
             <input type="submit" value="Update" class="update-button" />
           </form>
         </div>

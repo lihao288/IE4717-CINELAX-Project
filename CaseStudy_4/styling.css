@@ -111,6 +111,10 @@ label {
   display: flex;
 }
 
+.subtotal {
+  display: flex;
+}
+
 .total {
   margin: 0;
   padding: 0;
@@ -122,6 +126,10 @@ label {
   margin-left: 10px;
 }
 
+.checkout-button {
+  margin: 0 auto;
+}
+
 #musicianphoto {
   padding: 20px;
 }
@@ -131,25 +139,31 @@ label {
 }
 
 form {
-  font-family: Arial, sans-serif;
-  width: 350px;
-  padding: 30px 10px;
+  padding: 5px;
 }
 
 form > label {
   float: left;
   clear: left;
   display: block;
-  width: 100px;
+  width: 125px;
   text-align: right;
-  padding-right: 20px;
-  margin-top: 2px;
+  padding-right: 30px;
+  margin-top: 20px;
 }
 
 input,
 textarea {
-  /* margin-top: 1px; */
+  margin-top: 20px;
   display: block;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+input:first-of-type {
+  margin-top: 0;
 }
 
 /* Product Prices Update */
@@ -165,4 +179,15 @@ textarea {
 
 .update-button {
   margin: 0 auto;
+}
+
+/* Daily Sales Report */
+.by-product,
+.by-category {
+  display: flex;
+}
+
+.by-product h2,
+.by-category h2 {
+  padding: 0 20px;
 }

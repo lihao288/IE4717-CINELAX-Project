@@ -2,7 +2,7 @@ function name_field_check(event) {
   var name_field = event.currentTarget;
   console.log(name_field);
 
-  var pos = name_field.value.search(/[A-Za-z]/);
+  var pos = name_field.value.search(/^[A-Za-z\s]+$/);
 
   console.log(pos);
 

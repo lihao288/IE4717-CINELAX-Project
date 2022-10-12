@@ -26,131 +26,141 @@
       <div id="rightcolumn">
         <div class="content">
           <h2>Coffee at JavaJam</h2>
-          <table border="1">
-            <tr>
-              <td class="coffee-name">Just Java</td>
-              <td>
-                Regular house blend, decaffeinated coffee, or flavor of the day.
-                <br />
-                <span class="coffee-price">Endless Cup $2.00</span>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="justjava"
-                  size="2"
-                  onchange="computeCost()"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="sub-justjava"
-                  size="5"
-                  value="0.00"
-                  onfocus="this.blur();"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td class="coffee-name">Cafe au Lait</td>
-              <td>
-                House blended coffee infused into a smooth, steamed milk.
-                <br />
-                <label>
+          <form action="" method="post">
+            <table border="1">
+              <tr>
+                <td class="coffee-name">Just Java</td>
+                <td>
+                  Regular house blend, decaffeinated coffee, or flavor of the
+                  day.
+                  <br />
+                  <span class="coffee-price">Endless Cup $2.00</span>
+                </td>
+                <td>
                   <input
-                    type="radio"
-                    name="laitButton"
-                    value="2.00"
-                    onclick="laitChoice('single')"
-                    onchange="computeCost()"
-                    checked
-                  />
-                  <span class="coffee-price">Single $2.00</span>
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="laitButton"
-                    value="3.00"
-                    onclick="laitChoice('double')"
+                    type="text"
+                    id="justjava"
+                    size="2"
                     onchange="computeCost()"
                   />
-                  <span class="coffee-price">Double $3.00</span>
-                </label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="lait"
-                  size="2"
-                  onchange="computeCost()"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="sub-lait"
-                  size="5"
-                  value="0.00"
-                  onfocus="this.blur();"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td class="coffee-name">Iced Cappuccino</td>
-              <td>
-                Sweetened espresso blended with icy-cold milk and served in a
-                chilled glass. <br />
-                <label>
+                </td>
+                <td>
+                  <div class="subtotal">
+                    $<input
+                      type="text"
+                      id="sub-justjava"
+                      size="5"
+                      value="0.00"
+                      onfocus="this.blur();"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="coffee-name">Cafe au Lait</td>
+                <td>
+                  House blended coffee infused into a smooth, steamed milk.
+                  <br />
+                  <label>
+                    <input
+                      type="radio"
+                      name="laitButton"
+                      value="2.00"
+                      onclick="laitChoice('single')"
+                      onchange="computeCost()"
+                      checked
+                    />
+                    <span class="coffee-price">Single $2.00</span>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="laitButton"
+                      value="3.00"
+                      onclick="laitChoice('double')"
+                      onchange="computeCost()"
+                    />
+                    <span class="coffee-price">Double $3.00</span>
+                  </label>
+                </td>
+                <td>
                   <input
-                    type="radio"
-                    name="cappuccinoButton"
-                    value="4.75"
-                    onclick="cappuccinoChoice('single')"
+                    type="text"
+                    id="lait"
+                    size="2"
                     onchange="computeCost()"
-                    checked
                   />
-                  <span class="coffee-price">Single $4.75</span>
-                </label>
-                <label>
+                </td>
+                <td>
+                  <div class="subtotal">
+                    $<input
+                      type="text"
+                      id="sub-lait"
+                      size="5"
+                      value="0.00"
+                      onfocus="this.blur();"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="coffee-name">Iced Cappuccino</td>
+                <td>
+                  Sweetened espresso blended with icy-cold milk and served in a
+                  chilled glass. <br />
+                  <label>
+                    <input
+                      type="radio"
+                      name="cappuccinoButton"
+                      value="4.75"
+                      onclick="cappuccinoChoice('single')"
+                      onchange="computeCost()"
+                      checked
+                    />
+                    <span class="coffee-price">Single $4.75</span>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="cappuccinoButton"
+                      value="5.75"
+                      onclick="cappuccinoChoice('double')"
+                      onchange="computeCost()"
+                    />
+                    <span class="coffee-price">Double $5.75</span>
+                  </label>
+                </td>
+                <td>
                   <input
-                    type="radio"
-                    name="cappuccinoButton"
-                    value="5.75"
-                    onclick="cappuccinoChoice('double')"
+                    type="text"
+                    id="cappuccino"
+                    size="2"
                     onchange="computeCost()"
                   />
-                  <span class="coffee-price">Double $5.75</span>
-                </label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="cappuccino"
-                  size="2"
-                  onchange="computeCost()"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="sub-cappuccino"
-                  size="5"
-                  value="0.00"
-                  onfocus="this.blur();"
-                />
-              </td>
-            </tr>
-          </table>
-          <p class="total">
-            Total Cost:<input
-              type="text"
-              size="5"
-              id="total-cost"
-              onfocus="this.blur();"
-            />
-          </p>
+                </td>
+                <td>
+                  <div class="subtotal">
+                    $<input
+                      type="text"
+                      id="sub-cappuccino"
+                      size="5"
+                      value="0.00"
+                      onfocus="this.blur();"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <p class="total">
+              Total Cost: $<input
+                type="text"
+                size="5"
+                id="total-cost"
+                onfocus="this.blur();"
+              />
+            </p>
+            <input type="submit" value="Check Out" class="checkout-button" />
+          </form>
         </div>
       </div>
       <footer>

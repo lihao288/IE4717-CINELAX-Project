@@ -28,51 +28,45 @@
       <div id="rightcolumn">
         <div class="content">
           <h2>Jobs at JavaJam</h2>
-          <div>
+          <p>
             Want to work at JavaJam? Fill out the form below to start your
             application. <br />
             Required fields are marked with an asterisk *
-          </div>
-          <div>
-            <form method="post" action="show_post.php">
-              <label>*Name:</label>
-              <input
-                type="text"
-                name="ename"
-                id="ename"
-                required
-                placeholder="Enter your name here"
-                size="25"
-              />
-              <br /><br />
-              <label>*E-mail:</label>
-              <input
-                type="email"
-                name="eemail"
-                id="eemail"
-                required
-                placeholder="Enter your Email-ID here"
-                size="25"
-              />
-              <br /><br />
-              <label>Start Date:</label>
-              <input type="date" name="esdate" id="esdate" />
-              <br /><br />
-              <label>*Experience:</label>
-              <textarea
-                type="textarea"
-                name="pexperience"
-                id="pexperience"
-                required
-                rows="3"
-                cols="25"
-                placeholder="Enter your past experience here"
-              ></textarea>
-              <br /><br />
-              <input type="reset" value="Clear" /><br />
-              <input type="submit" value="Apply Now" /><br />
-            </form>
-          </div>
+          </p>
+          <form method="post" action="show_post.php">
+            <label for="ename">*Name:</label>
+            <input
+              type="text"
+              name="ename"
+              id="ename"
+              required
+              placeholder="Enter your name here"
+              size="25"
+            />
+            <label for="eemail">*E-mail:</label>
+            <input
+              type="email"
+              name="eemail"
+              id="eemail"
+              required
+              placeholder="Enter your Email-ID here"
+              size="25"
+            />
+            <label for="esdate">Start Date:</label>
+            <input type="date" name="esdate" id="esdate" />
+            <label for="pexperience">*Experience:</label>
+            <textarea
+              type="textarea"
+              name="pexperience"
+              id="pexperience"
+              required
+              rows="3"
+              cols="25"
+              placeholder="Enter your past experience here"
+            ></textarea>
+            <input type="reset" value="Clear" /><br />
+            <input type="submit" value="Apply Now" /><br />
+          </form>
         </div>
       </div>
       <footer>
