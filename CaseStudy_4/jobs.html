@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaJam Coffee House</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styling.css" />
+    <script src="jobs_validator.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <img src="javalogo.jpg" width="800" height="110" />
+        <!-- <img src="javalogo.jpg"> -->
+      </header>
+      <div id="leftcolumn">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="admin-price.html">Product Price Update</a></li>
+            <li><a href="admin-sales.html">Daily Sales Report</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="rightcolumn">
+        <div class="content">
+          <h2>Jobs at JavaJam</h2>
+          <div>
+            Want to work at JavaJam? Fill out the form below to start your
+            application. <br />
+            Required fields are marked with an asterisk *
+          </div>
+          <div>
+            <form method="post" action="show_post.php">
+              <label>*Name:</label>
+              <input
+                type="text"
+                name="ename"
+                id="ename"
+                required
+                placeholder="Enter your name here"
+                size="25"
+              />
+              <br /><br />
+              <label>*E-mail:</label>
+              <input
+                type="email"
+                name="eemail"
+                id="eemail"
+                required
+                placeholder="Enter your Email-ID here"
+                size="25"
+              />
+              <br /><br />
+              <label>Start Date:</label>
+              <input type="date" name="esdate" id="esdate" />
+              <br /><br />
+              <label>*Experience:</label>
+              <textarea
+                type="textarea"
+                name="pexperience"
+                id="pexperience"
+                required
+                rows="3"
+                cols="25"
+                placeholder="Enter your past experience here"
+              ></textarea>
+              <br /><br />
+              <input type="reset" value="Clear" /><br />
+              <input type="submit" value="Apply Now" /><br />
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <small>
+          <i>Copyright &copy; 2014 JavaJam Coffee House</i><br />
+          <a href="mailto:lihao@lau.com">lihao@lau.com</a>
+        </small>
+      </footer>
+    </div>
+    <script src="jobs_script.js"></script>
+  </body>
+</html>
