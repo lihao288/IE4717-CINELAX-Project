@@ -106,6 +106,10 @@ label {
   display: flex;
 }
 
+.subtotal {
+  display: flex;
+}
+
 .total {
   margin: 0;
   padding: 0;
