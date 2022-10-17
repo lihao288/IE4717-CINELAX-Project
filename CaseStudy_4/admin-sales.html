@@ -27,17 +27,20 @@
       <div id="rightcolumn">
         <div class="content">
           <h2>Click to generate daily sales report:</h2>
-          <div class="report">
-            <div class="by-product">
-              <input type="checkbox" name="product" id="product" />
-              <h2>Total dollar and quantity sales by products</h2>
+          <form action="sales-report.php" method="post">
+            <div class="report">
+              <div class="by-product">
+                <input type="checkbox" name="product" id="product" />
+                <h2>Total dollar and quantity sales by products</h2>
+              </div>
+              <div class="by-category">
+                <input type="checkbox" name="category" id="category" />
+                <h2>Total dollar and quantity sales by categories</h2>
+              </div>
+              <h2>Popular option of best selling product:</h2>
             </div>
-            <div class="by-category">
-              <input type="checkbox" name="category" id="category" />
-              <h2>Total dollar and quantity sales by categories</h2>
-            </div>
-            <h2>Popular option of best selling product:</h2>
-          </div>
+            <input type="submit" value="View Report" class="viewReportButton" />
+          </form>
         </div>
       </div>
       <footer>

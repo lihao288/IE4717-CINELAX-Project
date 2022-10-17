@@ -30,10 +30,10 @@ function cappuccinoChoice(price) {
 }
 
 function computeCost() {
-  var java = document.getElementById("justjava");
-  if (java.value == null) {
-    java.value = 0;
-  }
+  var java = document.getElementById("qty-justjava");
+  // if (java.value == null) {
+  //   java.value = 0;
+  // }
   if (isNaN(java.value)) {
     alert("Please enter an integer number");
   }
@@ -47,10 +47,10 @@ function computeCost() {
     javaSub.value = 0;
   }
 
-  var lait = document.getElementById("lait");
-  if (lait.value == null) {
-    lait.value = 0;
-  }
+  var lait = document.getElementById("qty-lait");
+  // if (lait.value == null) {
+  //   lait.value = 0;
+  // }
   var laitSub = document.getElementById("sub-lait");
   laitSub.value = lait.value * laitPrice;
 
@@ -61,10 +61,10 @@ function computeCost() {
     laitSub.value = 0;
   }
 
-  var cappuccino = document.getElementById("cappuccino");
-  if (cappuccino.value == null) {
-    cappuccino.value = 0;
-  }
+  var cappuccino = document.getElementById("qty-cappuccino");
+  // if (cappuccino.value == null) {
+  //   cappuccino.value = 0;
+  // }
   var cappuccinoSub = document.getElementById("sub-cappuccino");
   cappuccinoSub.value = cappuccino.value * cappuccinoPrice;
 
@@ -82,3 +82,15 @@ function computeCost() {
     parseFloat(laitSub.value) +
     parseFloat(cappuccinoSub.value);
 } //* end of computeCost
+
+function checkQty() {
+  var java = document.getElementById("qty-justjava").value;
+  var lait = document.getElementById("qty-lait").value;
+  var cappuccino = document.getElementById("qty-cappuccino").value;
+
+  if (java == 0 && lait == 0 && cappuccino == 0) {
+    alert("Please buy at least one coffee");
+    return false;
+  }
+  return true;
+}
