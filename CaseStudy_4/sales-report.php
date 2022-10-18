@@ -115,7 +115,30 @@
   $single_totalqty = $lait_single_qty + $cappuccino_single_qty;
   $double_totalqty = $lait_double_qty + $cappuccino_double_qty;
 
+  $best_coffee = 'Just Java';
+  $best_type = 'NULL';
+  $best_sales = $justjava_sales;
 
+  if ($lait_single_sales > $best_sales) {
+    $best_coffee = 'Cafe au Lait';
+    $best_type = 'Single';
+    $best_sales = $lait_single_sales;
+  }
+  if ($lait_double_sales > $best_sales) {
+    $best_coffee = 'Cafe au Lait';
+    $best_type = 'Double';
+    $best_sales = $lait_double_sales;
+  }
+  if ($cappuccino_single_sales > $best_sales) {
+    $best_coffee = 'Iced Cappuccino';
+    $best_type = 'Single';
+    $best_sales = $cappuccino_single_sales;
+  }
+  if ($cappuccino_double_sales > $best_sales) {
+    $best_coffee = 'Iced Cappuccino';
+    $best_type = 'Double';
+    $best_sales = $cappuccino_double_sales;
+  }
 
   if (isset($_POST['product'])) {
     echo "<table border='1'><thead>";
@@ -157,7 +180,9 @@
     echo ($cappuccino_double_qty);
     echo " Double ($";
     echo ($cappuccino_double_sales);
-    echo ")</p><br>";
+    echo ")</p>";
+
+    echo "<p>Popular (with highest selling quantity sold) option (category) of best selling (highest $$) product is <strong>" . $best_type . "</strong> of <strong>" . $best_coffee . "</strong></p>";
   }
 
   if (isset($_POST['category'])) {
@@ -200,7 +225,9 @@
     echo ($cappuccino_double_qty);
     echo " Double ($";
     echo ($cappuccino_double_sales);
-    echo ")</p><br>";
+    echo ")</p>";
+
+    echo "<p>Popular (with highest selling quantity sold) option (category) of best selling (highest $$) product is <strong>" . $best_type . "</strong> of <strong>" . $best_coffee . "</strong></p>";
   }
 
 
