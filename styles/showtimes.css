@@ -1,0 +1,92 @@
+@import url(basic-design.css);
+
+.showtimes-container {
+  max-width: 95%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.showtimes-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.showtimes-date {
+  display: flex;
+  padding: 20px 50px;
+  align-items: center;
+}
+
+.showtimes-date-leftarrow,
+.showtimes-date-rightarrow {
+  color: var(--text-color);
+  font-size: var(--fs-h1);
+  padding: 0 20px;
+}
+
+.showtimes-timing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  color: var(--text-color);
+}
+
+.showtimes-halls {
+  color: var(--text-color);
+}
+
+.showtimes-halls-heading {
+  padding: 20px 0;
+}
+
+.showtimes-halls-heading-text {
+  padding: 10px 0;
+}
+
+.showtimes-halls-content {
+  display: grid;
+  grid-template-columns: 20% 30% 50%;
+  padding: 20px 0;
+}
+
+.showtimes-poster-container img {
+  width: 100%;
+}
+
+.showtimes-shows-details {
+  padding: 0 50px;
+}
+
+.showtimes-shows-class-and-duration {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.showtimes-shows-classification {
+  background-color: var(--bg-color-accent);
+  padding: 5px;
+  font-size: var(--fs-classification);
+  border-radius: 5px;
+  color: var(--bg-color);
+}
+
+.showtimes-shows-duration {
+  padding: 0 20px;
+}
+
+.showtimes-shows-timing {
+  padding: 10px 20px;
+}
+
+.showtimes-shows-selection {
+  background-color: var(--bg-color-accent);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--bg-color);
+  text-decoration: none;
+}

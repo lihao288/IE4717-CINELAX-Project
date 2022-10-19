@@ -1,0 +1,99 @@
+@import url(basic-design.css);
+
+.home-container {
+  max-width: 95%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.home-hero-section img {
+  width: 100%;
+}
+
+.home-tab {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  padding: 20px 0;
+}
+
+.home-tab a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 10px 30px;
+}
+
+.home-popular {
+  margin: 0 30px;
+}
+
+.home-selected {
+  background-color: var(--bg-color-accent);
+  color: var(--bg-color-light);
+  border-radius: 10px;
+}
+
+.home-poster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.home-card {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--bg-color-light);
+  color: var(--text-color);
+  padding: 10px;
+  margin: 0 30px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.home-card:hover {
+  scale: 1.1;
+  transition: 0.3s ease-in-out;
+}
+
+.home-movie-poster img {
+  width: 100%;
+}
+
+.home-movie-title {
+  padding: 10px 0;
+  font-size: var(--fs-h2);
+}
+
+.home-classification {
+  background-color: var(--bg-color-accent);
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: var(--fs-classification);
+  border-radius: 5px;
+  color: var(--bg-color);
+}
+
+.home-duration {
+  padding: 20px 0;
+}
+
+.home-buy-ticket {
+  font-family: var(--ff-prm);
+  font-size: var(--fs-h3);
+  color: var(--bg-color);
+  padding: 5px 10px;
+  background-color: var(--bg-color-accent);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}

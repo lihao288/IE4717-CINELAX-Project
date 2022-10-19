@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/buy-ticket.css" />
     <title>CINELAX: Buy Ticket</title>
   </head>
   <body>
@@ -68,6 +68,82 @@
               You will receive a confirmation number at the end of the
               transaction.
             </p>
+            <div class="ticket-seating-plan">
+              <ul class="ticket-showcase">
+                <li>
+                  <div class="ticket-seat not-available"></div>
+                  <p>N/A</p>
+                </li>
+                <li>
+                  <div class="ticket-seat available"></div>
+                  <p>Available</p>
+                </li>
+                <li>
+                  <div class="ticket-seat occupied"></div>
+                  <p>Occupied</p>
+                </li>
+                <li>
+                  <div class="ticket-seat selected"></div>
+                  <p>Selected</p>
+                </li>
+              </ul>
+              <div class="ticket-seating-plan-container">
+                <div class="ticket-screen"></div>
+                <div class="ticket-seat-row">
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                </div>
+                <div class="ticket-seat-row">
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                </div>
+                <div class="ticket-seat-row">
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                </div>
+                <div class="ticket-seat-row">
+                  <div class="ticket-seat not-available"></div>
+                  <div class="ticket-seat not-available"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat"></div>
+                </div>
+                <div class="ticket-seat-row">
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                </div>
+              </div>
+              <p class="ticket-seat-info">
+                You have selected <span id="seat-count">0</span> seat(s).
+              </p>
+            </div>
           </div>
         </div>
       </div>
