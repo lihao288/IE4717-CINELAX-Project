@@ -26,7 +26,12 @@
       <div id="rightcolumn">
         <div class="content">
           <h2>Coffee at JavaJam</h2>
-          <form action="update-price.php" method="post" class="update-price">
+          <form
+            action="update-price.php"
+            method="post"
+            class="update-price"
+            onsubmit="return checkPrice(event)"
+          >
             <table border="1">
               <tr>
                 <td><input type="checkbox" name="justjava" id="justjava" /></td>
@@ -43,6 +48,7 @@
                       id="justjava-price"
                       value="2.00"
                       disabled
+                      onchange="checkPrice()"
                   /></span>
                 </td>
               </tr>
@@ -61,6 +67,7 @@
                         id="lait-single-price"
                         value="2.00"
                         disabled
+                        onchange="checkPrice()"
                     /></span>
                   </label>
                   <label>
@@ -72,6 +79,7 @@
                         id="lait-double-price"
                         value="3.00"
                         disabled
+                        onchange="checkPrice()"
                     /></span>
                   </label>
                 </td>
@@ -93,6 +101,7 @@
                         id="cappuccino-single-price"
                         value="4.75"
                         disabled
+                        onchange="checkPrice()"
                     /></span>
                   </label>
                   <label>
@@ -104,6 +113,7 @@
                         id="cappuccino-double-price"
                         value="5.75"
                         disabled
+                        onchange="checkPrice()"
                     /></span>
                   </label>
                 </td>

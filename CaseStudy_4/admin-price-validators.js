@@ -13,6 +13,45 @@ function justJava_isChecked(event) {
   }
 }
 
+function checkPrice() {
+  var justjavaPrice = document.getElementById("justjava-price");
+  var laitSinglePrice = document.getElementById("lait-single-price");
+  var laitDoublePrice = document.getElementById("lait-double-price");
+  var cappuccinoSinglePrice = document.getElementById(
+    "cappuccino-single-price"
+  );
+  var cappuccinoDoublePrice = document.getElementById(
+    "cappuccino-double-price"
+  );
+
+  if (isNaN(justjavaPrice.value)) {
+    alert("Please enter number only.");
+    justjavaPrice.focus();
+    return false;
+  }
+  if (isNaN(laitSinglePrice.value)) {
+    alert("Please enter number only.");
+    laitSinglePrice.focus();
+    return false;
+  }
+  if (isNaN(laitDoublePrice.value)) {
+    alert("Please enter number only.");
+    laitDoublePrice.focus();
+    return false;
+  }
+  if (isNaN(cappuccinoSinglePrice.value)) {
+    alert("Please enter number only.");
+    cappuccinoSinglePrice.focus();
+    return false;
+  }
+  if (isNaN(cappuccinoDoublePrice.value)) {
+    alert("Please enter number only.");
+    cappuccinoDoublePrice.focus();
+    return false;
+  }
+  return true;
+}
+
 function lait_isChecked(event) {
   var isChecked = event.target.checked;
 

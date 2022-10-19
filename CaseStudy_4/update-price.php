@@ -151,7 +151,7 @@ mysqli_close($conn);
                                 Regular house blend, decaffeinated coffee, or flavor of the
                                 day.
                                 <br />
-                                <span class="coffee-price">Endless Cup $<input type="text" size="2" name="justjava-price" id="justjava-price" value="<?php echo number_format($justjava_price, 2); ?>" disabled /></span>
+                                <span class="coffee-price">Endless Cup $<input type="text" size="2" name="justjava-price" id="justjava-price" value="<?php echo number_format($justjava_price, 2); ?>" disabled onchange="checkPrice()" /></span>
                             </td>
                         </tr>
                         <tr>
