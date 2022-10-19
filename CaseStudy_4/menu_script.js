@@ -38,7 +38,7 @@ function computeCost() {
     alert("Please enter an integer number");
   }
   var javaSub = document.getElementById("sub-justjava");
-  javaSub.value = java.value * 2.0;
+  javaSub.value = (java.value * 2.0).toFixed(2);
 
   if (javaSub.value < 0) {
     alert("Please enter a positive number");
@@ -52,8 +52,7 @@ function computeCost() {
   //   lait.value = 0;
   // }
   var laitSub = document.getElementById("sub-lait");
-  laitSub.value = lait.value * laitPrice;
-
+  laitSub.value = (lait.value * laitPrice).toFixed(2);
   if (laitSub.value < 0) {
     alert("Please enter a positive number");
     lait.value = 0;
@@ -66,7 +65,7 @@ function computeCost() {
   //   cappuccino.value = 0;
   // }
   var cappuccinoSub = document.getElementById("sub-cappuccino");
-  cappuccinoSub.value = cappuccino.value * cappuccinoPrice;
+  cappuccinoSub.value = (cappuccino.value * cappuccinoPrice).toFixed(2);
 
   if (cappuccinoSub.value < 0) {
     alert("Please enter a positive number");
@@ -76,11 +75,9 @@ function computeCost() {
   }
 
   // Compute the cost
-
-  document.getElementById("total-cost").value = totalCost =
-    parseFloat(javaSub.value) +
-    parseFloat(laitSub.value) +
-    parseFloat(cappuccinoSub.value);
+	totalCost = parseFloat(javaSub.value) + parseFloat(laitSub.value) + parseFloat(cappuccinoSub.value);
+	document.getElementById("total-cost").value = totalCost.toFixed(2);
+	
 } //* end of computeCost
 
 function checkQty() {

@@ -28,6 +28,15 @@ header {
 
 nav ul {
   list-style-type: none;
+  padding: 0px;
+  text-align: center;
+  
+}
+
+nav ul > li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 nav a {

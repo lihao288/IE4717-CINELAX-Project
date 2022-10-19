@@ -28,6 +28,10 @@ function checkPrice() {
     alert("Please enter number only.");
     justjavaPrice.focus();
     return false;
+  } else if (justjavaPrice.value < 0) {
+	alert("Please enter a positive number.");
+    justjavaPrice.focus();
+    return false;
   }
   if (isNaN(laitSinglePrice.value)) {
     alert("Please enter number only.");

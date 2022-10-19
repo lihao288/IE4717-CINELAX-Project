@@ -142,7 +142,7 @@ mysqli_close($conn);
         <div id="rightcolumn">
             <div class="content">
                 <h2>Coffee at JavaJam</h2>
-                <form action="update-price.php" method="post" class="update-price">
+                <form action="update-price.php" method="post" class="update-price" onsubmit="return checkPrice(event);">
                     <table border="1">
                         <tr>
                             <td><input type="checkbox" name="justjava" id="justjava" /></td>
