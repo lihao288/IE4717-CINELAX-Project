@@ -69,6 +69,8 @@
 
 .ticket-underline {
   text-decoration: underline;
+  color: var(--bg-color-accent);
+  font-weight: bold;
 }
 
 .ticket-details {
@@ -102,6 +104,8 @@
 
 .ticket-seat-row {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ticket-seat.occupied {
@@ -116,22 +120,40 @@
   background-color: var(--bg-color-light);
 }
 
-.ticket-seat:nth-of-type(2) {
+.ticket-seat:nth-of-type(3) {
   margin-right: 18px;
 }
 
-.ticket-seat:nth-last-of-type(2) {
+.ticket-seat:nth-last-of-type(3) {
   margin-left: 18px;
 }
 
 .ticket-seat:not(.occupied):not(.not-available):hover {
   cursor: pointer;
   scale: 1.2;
+  background-color: var(--bg-color-accent);
 }
 
 .ticket-showcase .ticket-seat:not(.occupied):not(.not-available):hover {
   cursor: default;
   scale: 1;
+}
+
+.ticket-seat-number,
+.ticket-seat-letter {
+  display: block;
+  height: 20px;
+  width: 22px;
+  margin: 3px;
+  text-align: center;
+}
+
+.ticket-seat-number:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.ticket-seat-number:nth-last-of-type(2) {
+  margin-left: 18px;
 }
 
 .ticket-showcase {

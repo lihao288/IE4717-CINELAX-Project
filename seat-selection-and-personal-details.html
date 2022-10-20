@@ -44,9 +44,10 @@
             <div class="ticket-details-box">
               <p class="ticket-details-text">
                 You have selected
-                <span class="ticket-underline">Movie Name</span> at
-                <span class="ticket-underline">Cinema Branch</span>. Cinema Hall
-                1
+                <span class="ticket-underline" id="movie-name">Ant Man</span> at
+                <span class="ticket-underline" id="cinema-branch"
+                  >Cinema Branch</span
+                >. Cinema Hall 1
               </p>
               <div class="ticket-details">
                 <div class="ticket-cinema">
@@ -90,36 +91,53 @@
               <div class="ticket-seating-plan-container">
                 <div class="ticket-screen"></div>
                 <div class="ticket-seat-row">
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat-number">1</div>
+                  <div class="ticket-seat-number">2</div>
+                  <div class="ticket-seat-number">3</div>
+                  <div class="ticket-seat-number">4</div>
+                  <div class="ticket-seat-number">5</div>
+                  <div class="ticket-seat-number">6</div>
+                  <div class="ticket-seat-number">7</div>
+                  <div class="ticket-seat-number">8</div>
                 </div>
                 <div class="ticket-seat-row">
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat occupied"></div>
-                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat-letter">A</div>
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat"></div>
-                  <div class="ticket-seat occupied"></div>
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat-letter">A</div>
                 </div>
                 <div class="ticket-seat-row">
+                  <div class="ticket-seat-letter">B</div>
                   <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat"></div>
-                  <div class="ticket-seat occupied"></div>
                   <div class="ticket-seat occupied"></div>
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat-letter">B</div>
                 </div>
                 <div class="ticket-seat-row">
+                  <div class="ticket-seat-letter">C</div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat occupied"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat"></div>
+                  <div class="ticket-seat-letter">C</div>
+                </div>
+                <div class="ticket-seat-row">
+                  <div class="ticket-seat-letter">D</div>
                   <div class="ticket-seat not-available"></div>
                   <div class="ticket-seat not-available"></div>
                   <div class="ticket-seat"></div>
@@ -128,8 +146,10 @@
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat occupied"></div>
                   <div class="ticket-seat"></div>
+                  <div class="ticket-seat-letter">D</div>
                 </div>
                 <div class="ticket-seat-row">
+                  <div class="ticket-seat-letter">E</div>
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat"></div>
@@ -138,6 +158,17 @@
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat"></div>
                   <div class="ticket-seat"></div>
+                  <div class="ticket-seat-letter">E</div>
+                </div>
+                <div class="ticket-seat-row">
+                  <div class="ticket-seat-number">1</div>
+                  <div class="ticket-seat-number">2</div>
+                  <div class="ticket-seat-number">3</div>
+                  <div class="ticket-seat-number">4</div>
+                  <div class="ticket-seat-number">5</div>
+                  <div class="ticket-seat-number">6</div>
+                  <div class="ticket-seat-number">7</div>
+                  <div class="ticket-seat-number">8</div>
                 </div>
               </div>
               <p class="ticket-seat-info">
@@ -148,5 +179,6 @@
         </div>
       </div>
     </main>
+    <script src="script/seat-script.js"></script>
   </body>
 </html>
