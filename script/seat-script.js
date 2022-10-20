@@ -5,7 +5,18 @@ const seats = document.querySelectorAll(
 const count = document.getElementById("seat-count");
 const movie = document.getElementById("movie-name");
 
-let ticketPrice = 15.0;
+// let ticketPrice = 15.0;
+
+// update couunt
+function updateSelectedCount(seat) {
+  const selectedSeats = document.querySelectorAll(
+    ".ticket-seat-row .ticket-seat.selected"
+  );
+
+  const selectedSeatsCount = selectedSeats.length;
+
+  count.innerText = selectedSeatsCount;
+}
 
 container.addEventListener("click", (e) => {
   if (
@@ -14,6 +25,7 @@ container.addEventListener("click", (e) => {
     !e.target.classList.contains("not-available")
   ) {
     e.target.classList.toggle("selected");
-    // console.log(e.target.value);
   }
+
+  updateSelectedCount();
 });
