@@ -58,31 +58,8 @@
   color: var(--text-color);
 }
 
-.ticket-details-box {
-  padding: 20px;
-  border: 1px solid var(--bg-color-accent);
-}
-
-.ticket-details-text {
-  padding: 0 0 20px;
-}
-
-.ticket-underline {
-  text-decoration: underline;
-  color: var(--bg-color-accent);
-  font-weight: bold;
-}
-
-.ticket-details {
-  display: flex;
-}
-
-.ticket-date {
-  padding: 0 50px;
-}
-
 .ticket-instruction {
-  padding: 40px 0;
+  padding: 0 40px;
 }
 
 .ticket-seating-plan {
@@ -157,7 +134,7 @@
 }
 
 .ticket-showcase {
-  padding: 15px 10px;
+  padding: 30px 10px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -174,6 +151,12 @@
   margin-left: 5px;
 }
 
+.ticket-seating-plan-container {
+  padding: 20px 10px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
 .ticket-screen {
   background-color: var(--text-color);
   height: 70px;
@@ -183,8 +166,37 @@
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
 }
 
-.ticket-seating-plan-container {
-  padding: 20px 10px;
-  perspective: 1000px;
-  margin-bottom: 30px;
+.ticket-seat-info {
+  padding: 20px 0;
+}
+
+.ticket-details-box {
+  margin: 10px 40px;
+  padding: 20px;
+  border: 1px solid var(--bg-color-accent);
+}
+
+.ticket-details-text {
+  padding: 0 0 20px;
+}
+
+.ticket-underline {
+  text-decoration: underline;
+  color: var(--bg-color-accent);
+  font-weight: bold;
+}
+
+.ticket-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-details-first-row,
+.ticket-details-second-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ticket-total {
+  padding: 10px 40px;
 }

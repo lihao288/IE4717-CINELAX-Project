@@ -41,34 +41,11 @@
             <img src="movie images & videos/Ant-man/Ant-Man.jpeg" alt="" />
           </div>
           <div class="ticket-seat-selection-content">
-            <div class="ticket-details-box">
-              <p class="ticket-details-text">
-                You have selected
-                <span class="ticket-underline" id="movie-name">Ant Man</span> at
-                <span class="ticket-underline" id="cinema-branch"
-                  >Cinema Branch</span
-                >. Cinema Hall 1
-              </p>
-              <div class="ticket-details">
-                <div class="ticket-cinema">
-                  <p class="ticket-cinema-heading">Cinema Branch: <br /></p>
-                  <p class="ticket-cinema-selected">Jurong Point</p>
-                </div>
-                <div class="ticket-date">
-                  <p class="ticket-date-heading">Date: <br /></p>
-                  <p class="ticket-date-selected">01 Jan 2022</p>
-                </div>
-                <div class="ticket-time">
-                  <p class="ticket-time-heading">Time: <br /></p>
-                  <p class="ticket-time-selected">10:30 AM</p>
-                </div>
-              </div>
-            </div>
-            <p class="ticket-instruction">
+            <h3 class="ticket-instruction">
               Please select your seat(s). <br />
               You will receive a confirmation number at the end of the
               transaction.
-            </p>
+            </h3>
             <div class="ticket-seating-plan">
               <ul class="ticket-showcase">
                 <li>
@@ -173,8 +150,66 @@
               </div>
               <p class="ticket-seat-info">
                 You have selected <span id="seat-count">0</span> seat(s).
+                <!-- with seat number(s): <span id="seat-number"></span>. -->
               </p>
             </div>
+            <div class="ticket-details-box">
+              <p class="ticket-details-text">
+                You have selected
+                <span class="ticket-underline" id="movie-name">Ant Man</span> at
+                <span class="ticket-underline" id="cinema-branch"
+                  >Cinema Branch</span
+                >.
+              </p>
+              <div class="ticket-details">
+                <div class="ticket-details-first-row">
+                  <div class="ticket-date">
+                    <p class="ticket-date-text">
+                      Date: <span id="ticket-date-selected">01 Jan 2022</span>
+                    </p>
+                  </div>
+                  <div class="ticket-cinema-hall">
+                    <p class="ticket-cinema-hall-text">
+                      Cinema Hall:
+                      <span id="ticket-cinema-hall-selected">Hall 1</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="ticket-details-second-row">
+                  <div class="ticket-time">
+                    <p class="ticket-time-text">
+                      Time: <span id="ticket-time-selected">10:30 AM</span>
+                    </p>
+                  </div>
+                  <div class="ticket-cinema-seat">
+                    <p class="ticket-cinema-seat-text">
+                      Selected Seats:
+                      <span id="ticket-cinema-seat-selected"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="ticket-total">
+              Total Amount: S$<span id="ticket-price"></span>
+            </p>
+            <h3 class="ticket-customer-info-heading">Customer Information</h3>
+            <form action="">
+              <div class="ticket-customer-info">
+                <label for="customer-name">Name: </label>
+                <input type="text" name="customer-name" id="customer-name" />
+                <label for="customer-mobileno">Mobile-No: </label>
+                <input
+                  type="tel"
+                  name="customer-mobileno"
+                  id="customer-mobileno"
+                  pattern="[0-9]{8}"
+                />
+                <label for="customer-email">Email: </label>
+                <input type="email" name="customer-email" id="customer-email" />
+              </div>
+              <input type="submit" value="Proceed to Payment" />
+            </form>
           </div>
         </div>
       </div>

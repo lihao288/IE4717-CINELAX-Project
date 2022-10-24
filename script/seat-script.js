@@ -4,18 +4,22 @@ const seats = document.querySelectorAll(
 );
 const count = document.getElementById("seat-count");
 const movie = document.getElementById("movie-name");
+const seatNumber = document.getElementById("ticket-cinema-seat-selected");
+var seatNumberList = [];
 
 // let ticketPrice = 15.0;
 
 // update couunt
-function updateSelectedCount(seat) {
-  const selectedSeats = document.querySelectorAll(
-    ".ticket-seat-row .ticket-seat.selected"
-  );
+function updateSelectedCount() {
+  // const selectedSeats = document.querySelectorAll(
+  //   ".ticket-seat-row .ticket-seat.selected"
+  // );
 
-  const selectedSeatsCount = selectedSeats.length;
+  // const selectedSeatsCount = selectedSeats.length;
+  const selectedSeatsCount = seatNumberList.length;
 
   count.innerText = selectedSeatsCount;
+  seatNumber.innerHTML = seatNumberList;
 }
 
 container.addEventListener("click", (e) => {
@@ -25,6 +29,15 @@ container.addEventListener("click", (e) => {
     !e.target.classList.contains("not-available")
   ) {
     e.target.classList.toggle("selected");
+    let clickedSeatNumber = e.target.dataset.value;
+    if (e.target.classList.contains("selected")) {
+      seatNumberList.push(clickedSeatNumber);
+    } else {
+      let index = seatNumberList.indexOf(clickedSeatNumber);
+      if (index > -1) {
+        seatNumberList.splice(index, 1);
+      }
+    }
   }
 
   updateSelectedCount();
