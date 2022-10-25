@@ -33,11 +33,18 @@
   justify-content: center;
   padding: 5px 20px;
   color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
-.showtimes-timing .active {
-  padding: 5px 20px;
+.showtimes-timing:hover {
+  background-color: #21325E;
   color: var(--text-color);
+}
+
+.active {
+  /* padding: 5px 20px;
+  color: var(--text-color); */
+  color: var(--bg-color);
   background-color: #ffd36b;
 }
 
@@ -87,6 +94,11 @@
 
 .showtimes-shows-timing {
   padding: 10px 20px;
+}
+
+.showtimes-shows-selection:hover {
+  background-color: #21325E;
+  color: var(--text-color);
 }
 
 .showtimes-shows-selection {
