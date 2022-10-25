@@ -69,3 +69,34 @@ nav a {
   color: var(--bg-color-light);
   font-size: var(--fs-h1);
 }
+
+footer {
+  background-color: var(--bg-color-accent);
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 85%;
+}
+
+.footer-header {
+  margin-right: 80px;
+  display: flex;
+  /* padding: 5px 0px; */
+  font-size: 90%;
+  align-items: center;
+}
+
+.footer-nav {
+  color: var(--bg-color);
+  text-decoration: none;
+  padding: 5px;
+}
+
+.footer-nav:hover {
+  background-color: #21325E;
+  color: var(--text-color);
+  border-radius: 5px;
+}
