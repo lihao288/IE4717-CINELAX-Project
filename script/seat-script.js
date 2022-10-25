@@ -32,6 +32,7 @@ container.addEventListener("click", (e) => {
     let clickedSeatNumber = e.target.dataset.value;
     if (e.target.classList.contains("selected")) {
       seatNumberList.push(clickedSeatNumber);
+      seatNumberList.sort();
     } else {
       let index = seatNumberList.indexOf(clickedSeatNumber);
       if (index > -1) {

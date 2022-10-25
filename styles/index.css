@@ -98,6 +98,6 @@
   text-decoration: none;
 }
 
-.btn .active {
+.btn .selected {
   color: var(--bg-color-light);
 }

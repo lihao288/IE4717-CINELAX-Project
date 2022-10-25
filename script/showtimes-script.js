@@ -4,7 +4,7 @@ const thirdDate = document.querySelector(".showtimes-date-3");
 const leftArrow = document.querySelector(".showtimes-date-leftarrow");
 const rightArrow = document.querySelector(".showtimes-date-rightarrow");
 const selectedDateContainer = document.querySelector(".showtimes-date");
-const selectedDate = document.querySelectorAll(".showtimes-timing");
+const dateSelection = document.querySelectorAll(".showtimes-timing");
 var count = 0;
 const today = new Date();
 
@@ -36,13 +36,25 @@ function calculateDate() {
 calculateDate();
 localStorage.setItem("Date", today.toDateString());
 
-leftArrow.addEventListener("click", function (e) {
+function getSelectedDate() {
+  var localDate = localStorage.getItem("Date");
+  dateSelection.forEach((date) => {
+    date.classList.remove("selected");
+    if (date.innerHTML == localDate) {
+      date.classList.add("selected");
+    }
+  });
+}
+
+leftArrow.addEventListener("click", () => {
   count--;
   calculateDate();
+  getSelectedDate();
 });
-rightArrow.addEventListener("click", function (e) {
+rightArrow.addEventListener("click", () => {
   count++;
   calculateDate();
+  getSelectedDate();
 });
 
 selectedDateContainer.addEventListener("click", (e) => {
@@ -51,7 +63,7 @@ selectedDateContainer.addEventListener("click", (e) => {
     e.target.classList.contains("showtimes-date-2") ||
     e.target.classList.contains("showtimes-date-3")
   ) {
-    selectedDate.forEach((date) => {
+    dateSelection.forEach((date) => {
       date.classList.remove("selected");
     });
     e.target.classList.toggle("selected");
