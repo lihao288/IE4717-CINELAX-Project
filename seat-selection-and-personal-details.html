@@ -23,7 +23,7 @@
     <main class="ticket-container">
       <div class="ticket-content">
         <div class="ticket-steps">
-          <div class="ticket-steps-details">
+          <div class="ticket-steps-details current">
             <div class="ticket-step-number">1</div>
             <h2 class="ticket-step-text">Seat & Personal Info</h2>
           </div>
@@ -194,21 +194,46 @@
               Total Amount: S$<span id="ticket-price"></span>
             </p>
             <h3 class="ticket-customer-info-heading">Customer Information</h3>
-            <form action="">
+            <form action="" class="ticket-customer-form">
               <div class="ticket-customer-info">
-                <label for="customer-name">Name: </label>
-                <input type="text" name="customer-name" id="customer-name" />
-                <label for="customer-mobileno">Mobile-No: </label>
+                <label for="customer-name" class="customer-name">Name: </label>
+                <input
+                  type="text"
+                  name="customer-name"
+                  id="customer-name"
+                  class="customer-name"
+                />
+                <label for="customer-mobileno" class="customer-mobileno"
+                  >Mobile-No:
+                </label>
                 <input
                   type="tel"
                   name="customer-mobileno"
                   id="customer-mobileno"
+                  class="customer-mobileno"
                   pattern="[0-9]{8}"
                 />
-                <label for="customer-email">Email: </label>
-                <input type="email" name="customer-email" id="customer-email" />
+                <label for="customer-email" class="customer-email"
+                  >Email:
+                </label>
+                <input
+                  type="email"
+                  name="customer-email"
+                  id="customer-email"
+                  class="customer-email"
+                />
               </div>
-              <input type="submit" value="Proceed to Payment" />
+
+              <!-- <input
+                type="submit"
+                value="Proceed to Payment"
+                class="payment-button"
+              /> -->
+              <a
+                href="ticket-price-&-payment-options.html"
+                class="payment-button"
+                >Proceed to Payment</a
+              >
             </form>
           </div>
         </div>

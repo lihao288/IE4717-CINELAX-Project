@@ -29,13 +29,19 @@
 .ticket-step-number {
   width: 35px;
   height: 35px;
-  margin: 0 20px;
+  margin-right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color-accent);
   color: var(--bg-color);
   border-radius: 50%;
+}
+
+.current {
+  border: 2px solid var(--bg-color-accent);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .ticket-seat-selection {
@@ -194,9 +200,42 @@
 .ticket-details-first-row,
 .ticket-details-second-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 15% 85%;
 }
 
 .ticket-total {
   padding: 10px 40px;
+}
+
+.ticket-customer-info-heading {
+  padding: 20px 40px;
+}
+
+.ticket-customer-info {
+  width: 25%;
+  padding: 10px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.customer-mobileno {
+  margin: 20px 0;
+}
+
+.ticket-customer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-button {
+  width: 15%;
+  border: none;
+  outline: none;
+  margin: 10px auto;
+  font-family: var(--ff-prm);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--bg-color-accent);
+  cursor: pointer;
 }

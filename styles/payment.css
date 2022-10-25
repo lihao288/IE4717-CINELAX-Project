@@ -1,0 +1,123 @@
+@import url(basic-design.css);
+
+.payment-container {
+  max-width: 95%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.payment-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.ticket-steps {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  color: var(--text-color);
+}
+
+.ticket-steps-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.ticket-step-number {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color-accent);
+  color: var(--bg-color);
+  border-radius: 50%;
+}
+
+.current {
+  border: 2px solid var(--bg-color-accent);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ticket-price {
+  padding: 20px 0;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-price-content {
+  margin: 20px 0;
+  border: 1px solid var(--bg-color-accent);
+  padding: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+th {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--text-color);
+}
+
+td {
+  padding: 10px 0;
+}
+
+td:not(.first-row) {
+  padding: 0 0 15px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.left {
+  text-align: left;
+}
+
+.ticket-total-price {
+  padding-top: 20px;
+  float: right;
+}
+
+#total-price {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.payment-method {
+  padding: 20px 0;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-method-content {
+  margin: 20px 0;
+  border: 1px solid var(--bg-color-accent);
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.payment-method-content a {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-method-content a img {
+  width: 100%;
+}

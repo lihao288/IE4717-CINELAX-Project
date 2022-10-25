@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/buy-ticket.css" />
+    <link rel="stylesheet" href="styles/payment.css" />
     <title>CINELAX: Showtimes</title>
   </head>
   <body>
@@ -12,82 +12,72 @@
         <h1 class="nav-heading">Cinelax</h1>
         <div class="nav-links">
           <a href="index.html">Home</a>
-          <a href="#">Showtimes</a>
+          <a href="showtimes.html">Showtimes</a>
           <a href="#">Contact</a>
           <a href="#">My Booking</a>
         </div>
       </nav>
     </header>
-    <main class="showtimes-container">
-        <div class="ticket-content">
-            <div class="ticket-steps">
-              <div class="ticket-steps-details">
-                <div class="ticket-step-number">1</div>
-                <h2 class="ticket-step-text">Seat & Personal Info</h2>
-              </div>
-              <div class="ticket-steps-details">
-                <div class="ticket-step-number">2</div>
-                <h2 class="ticket-step-text">Price & Payment Selection</h2>
-              </div>
-              <div class="ticket-steps-details">
-                <div class="ticket-step-number">3</div>
-                <h2 class="ticket-step-text">Confirmation</h2>
-              </div>
-            </div>
-            <div class="ticket-seat-selection">
-              <div class="ticket-poster-container">
-                <img src="movie images & videos/Ant-man/Ant-Man.jpeg" alt="" />
-              </div>
-              <div class="ticket-seat-selection-content">
-                <div class="ticket-details-box">
-                  <p class="ticket-details-text">
-                    You have selected
-                    <span class="ticket-underline">Movie Name</span>.
-                  </p>
-                  <div class="ticket-details">
-                    <div class="ticket-date">
-                      <p class="ticket-date-heading">Date: <br /></p>
-                      <p class="ticket-date-selected">01 Jan 2022</p>
-                    </div>
-                    <div class="ticket-time">
-                      <p class="ticket-time-heading">Time: <br /></p>
-                      <p class="ticket-time-selected">10:30 AM</p>
-                    </div>
-                    <div class="ticket-date">
-                        <p class="ticket-date-heading">Cinema Hall: <br /></p>
-                        <p class="ticket-date-selected">1</p>
-                    </div>
-                    <div class="ticket-date">
-                        <p class="ticket-date-heading">Selected Seats: <br /></p>
-                        <p class="ticket-date-selected">A02, A03</p>
-                    </div>
-                  </div>
-                </div>
-                <p class="ticket-instruction">
-                  Total Amount: S$ 47.00 <br>                
-                </p>
-                <p>
-                    Customer Information
-                </p>
-                <div class="ticket-details-box">
-                    <div class="ticket-details">
-                      <div class="ticket-cinema">
-                        <p class="ticket-cinema-heading">Name: <br /></p>
-                        <p class="ticket-cinema-selected">Bob</p>
-                      </div>
-                      <div class="ticket-date">
-                        <p class="ticket-date-heading">Mobile No.: <br /></p>
-                        <p class="ticket-date-selected">98765432</p>
-                      </div>
-                      <div class="ticket-time">
-                        <p class="ticket-time-heading">E-mail: <br /></p>
-                        <p class="ticket-time-selected">abc@123.com</p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
+    <main class="payment-container">
+      <div class="payment-content">
+        <div class="ticket-steps">
+          <div class="ticket-steps-details">
+            <div class="ticket-step-number">1</div>
+            <h2 class="ticket-step-text">Seat & Personal Info</h2>
           </div>
+          <div class="ticket-steps-details current">
+            <div class="ticket-step-number">2</div>
+            <h2 class="ticket-step-text">Price & Payment Selection</h2>
+          </div>
+          <div class="ticket-steps-details">
+            <div class="ticket-step-number">3</div>
+            <h2 class="ticket-step-text">Confirmation</h2>
+          </div>
+        </div>
+        <div class="ticket-price">
+          <h2 class="ticket-price-heading">Ticket Price</h2>
+          <div class="ticket-price-content">
+            <table class="ticket-price-table">
+              <col style="width: 50%" />
+              <thead>
+                <th class="left">Ticket Type</th>
+                <th>Ticket Price</th>
+                <th>Quantity</th>
+                <th>Total Amount</th>
+              </thead>
+              <tr>
+                <td class="first-row left">Standard Price</td>
+                <td class="first-row">S$22.50</td>
+                <td class="first-row">2</td>
+                <td class="first-row">S$45.00</td>
+              </tr>
+              <tr>
+                <td class="left">Convenience Fee</td>
+                <td>S$2.00</td>
+                <td>1</td>
+                <td>S$2.00</td>
+              </tr>
+            </table>
+            <p class="ticket-total-price">
+              Total: S$ <span id="total-price">47.00</span>
+            </p>
+          </div>
+        </div>
+        <div class="payment-method">
+          <h2 class="payment-method-heading">Payment Method</h2>
+          <div class="payment-method-content">
+            <a href="confirmation.html"
+              ><img src="movie images & videos/Payment/visa.jpg" alt=""
+            /></a>
+            <a href="confirmation.html"
+              ><img src="movie images & videos/Payment/mastercard.png" alt=""
+            /></a>
+            <a href="confirmation.html"
+              ><img src="movie images & videos/Payment/paynow.jpg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- Script -->
     <script src="script.js"></script>
