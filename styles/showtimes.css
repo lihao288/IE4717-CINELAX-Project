@@ -13,6 +13,10 @@
   padding: 20px;
 }
 
+.showtimes-timing {
+  cursor: pointer;
+}
+
 .showtimes-date {
   display: flex;
   padding: 20px 50px;
@@ -24,6 +28,7 @@
   color: var(--text-color);
   font-size: var(--fs-h1);
   padding: 0 20px;
+  cursor: pointer;
 }
 
 .showtimes-timing {
@@ -33,6 +38,17 @@
   justify-content: center;
   padding: 5px 20px;
   color: var(--text-color);
+  border: 1px solid var(--bg-color-accent);
+}
+
+.showtimes-date-2 {
+  border-left: none;
+  border-right: none;
+}
+
+.selected {
+  background-color: var(--bg-color-accent);
+  color: var(--bg-color);
 }
 
 .showtimes-halls {
