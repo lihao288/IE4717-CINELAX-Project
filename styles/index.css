@@ -97,3 +97,7 @@
   border-radius: 5px;
   text-decoration: none;
 }
+
+.btn .active {
+  color: var(--bg-color-light);
+}

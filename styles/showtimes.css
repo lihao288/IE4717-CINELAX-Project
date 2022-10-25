@@ -35,6 +35,12 @@
   color: var(--text-color);
 }
 
+.showtimes-timing .active {
+  padding: 5px 20px;
+  color: var(--text-color);
+  background-color: #ffd36b;
+}
+
 .showtimes-halls {
   color: var(--text-color);
 }
