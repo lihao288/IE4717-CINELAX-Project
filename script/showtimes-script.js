@@ -5,8 +5,10 @@ const leftArrow = document.querySelector(".showtimes-date-leftarrow");
 const rightArrow = document.querySelector(".showtimes-date-rightarrow");
 const selectedDateContainer = document.querySelector(".showtimes-date");
 const dateSelection = document.querySelectorAll(".showtimes-timing");
+
 var count = 0;
 const today = new Date();
+var isSelected = false;
 
 function calculateDate() {
   var dateOne = new Date();
@@ -70,3 +72,17 @@ selectedDateContainer.addEventListener("click", (e) => {
     localStorage.setItem("Date", e.target.innerHTML);
   }
 });
+
+function checkDateSelection() {
+  dateSelection.forEach((date) => {
+    if (date.classList.contains("selected")) {
+      isSelected = true;
+    }
+  });
+
+  if (!isSelected) {
+    alert("Please select a date.");
+    return false;
+  }
+  return true;
+}
