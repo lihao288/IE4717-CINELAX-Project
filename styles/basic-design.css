@@ -73,6 +73,7 @@ nav a {
 
 footer {
   background-color: var(--bg-color-accent);
+  /* bottom: 0; */
 }
 
 .container {
