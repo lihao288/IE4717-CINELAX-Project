@@ -3,8 +3,13 @@ const secondDate = document.querySelector(".showtimes-date-2");
 const thirdDate = document.querySelector(".showtimes-date-3");
 const leftArrow = document.querySelector(".showtimes-date-leftarrow");
 const rightArrow = document.querySelector(".showtimes-date-rightarrow");
-const selectedDateContainer = document.querySelector(".showtimes-date");
+
+const dateSelectionContainer = document.querySelector(".showtimes-date");
 const dateSelection = document.querySelectorAll(".showtimes-timing");
+
+const timeSelectionContainer = document.querySelector(
+  ".showtimes-shows-timing"
+);
 
 var count = 0;
 const today = new Date();
@@ -34,10 +39,6 @@ function calculateDate() {
   thirdDate.innerHTML = dateThree.toDateString();
 }
 
-// initialize
-calculateDate();
-localStorage.setItem("Date", today.toDateString());
-
 function getSelectedDate() {
   var localDate = localStorage.getItem("Date");
   dateSelection.forEach((date) => {
@@ -47,6 +48,29 @@ function getSelectedDate() {
     }
   });
 }
+
+function checkDateSelection(e) {
+  dateSelection.forEach((date) => {
+    if (date.classList.contains("selected")) {
+      isSelected = true;
+    }
+  });
+
+  if (!isSelected) {
+    alert("Please select a date.");
+    return false;
+  }
+  return true;
+}
+
+function accessParentElement() {
+  console.log();
+}
+
+// initialize
+calculateDate();
+localStorage.setItem("Date", today.toDateString());
+accessParentElement();
 
 leftArrow.addEventListener("click", () => {
   count--;
@@ -59,7 +83,7 @@ rightArrow.addEventListener("click", () => {
   getSelectedDate();
 });
 
-selectedDateContainer.addEventListener("click", (e) => {
+dateSelectionContainer.addEventListener("click", (e) => {
   if (
     e.target.classList.contains("showtimes-date-1") ||
     e.target.classList.contains("showtimes-date-2") ||
@@ -73,16 +97,15 @@ selectedDateContainer.addEventListener("click", (e) => {
   }
 });
 
-function checkDateSelection() {
-  dateSelection.forEach((date) => {
-    if (date.classList.contains("selected")) {
-      isSelected = true;
-    }
-  });
+timeSelectionContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("showtimes-shows-selection")) {
+    // Save time
+    localStorage.setItem("Time", e.target.innerHTML);
 
-  if (!isSelected) {
-    alert("Please select a date.");
-    return false;
+    // Save hall
+    let selectedHall =
+      e.target.parentElement.parentElement.parentElement.firstElementChild
+        .firstElementChild.innerHTML;
+    localStorage.setItem("Hall", selectedHall);
   }
-  return true;
-}
+});
