@@ -17,14 +17,24 @@ const ticketPrice = 10.5;
 const convenienceFee = 2.0;
 
 function resizeInput() {
-  this.style.width = this.value.length + "ch";
+  if (this.value.length > 40) {
+    this.style.width = (this.value.length + 5) * 8 + "px";
+  } else if (this.value.length > 20) {
+    this.style.width = (this.value.length + 1) * 9.5 + "px";
+  } else {
+    this.style.width = (this.value.length + 3) * 8 + "px";
+  }
 }
 
 function fetchData() {
-  date.innerHTML = localStorage.getItem("Date");
-  hall.innerHTML = localStorage.getItem("Hall");
-  time.innerHTML = localStorage.getItem("Time");
+  // date.innerHTML = localStorage.getItem("Date");
+  // hall.innerHTML = localStorage.getItem("Hall");
+  // time.innerHTML = localStorage.getItem("Time");
   // movie.innerHTML = localStorage.getItem("Movie");
+
+  date.value = localStorage.getItem("Date");
+  hall.value = localStorage.getItem("Hall");
+  time.value = localStorage.getItem("Time");
 
   movie.value = localStorage.getItem("Movie");
   movie.addEventListener("input", resizeInput);
@@ -76,13 +86,13 @@ function updateSelectedCount() {
   const selectedSeatsCount = seatNumberList.length;
 
   // update ui on count change
-  count.innerText = selectedSeatsCount;
+  count.value = selectedSeatsCount;
 
   // update total amount
   updatePrice(selectedSeatsCount);
 
   // update ui on selected seats
-  seatNumber.innerHTML = seatNumberList;
+  seatNumber.value = seatNumberList;
 }
 
 function updatePrice(quantity) {

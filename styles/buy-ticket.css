@@ -186,12 +186,6 @@
   padding: 0 0 20px;
 }
 
-.ticket-underline {
-  text-decoration: underline;
-  color: var(--bg-color-accent);
-  font-weight: bold;
-}
-
 .ticket-details {
   display: flex;
   flex-direction: column;
@@ -244,5 +238,17 @@
   border: none;
   background: none;
   font-size: var(--fs-p);
+  font-family: var(--ff-prm);
+  /* text-align: center; */
+  color: var(--text-color);
+}
+
+.center {
   text-align: center;
+}
+
+.ticket-underline {
+  text-decoration: underline;
+  color: var(--bg-color-accent);
+  font-weight: bold;
 }

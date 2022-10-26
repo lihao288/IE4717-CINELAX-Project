@@ -108,7 +108,6 @@ timeSelectionContainer.forEach((timeSelection) => {
       let selectedMovie =
         e.target.parentElement.previousElementSibling.firstElementChild
           .innerHTML;
-      console.log(selectedMovie);
       localStorage.setItem("Movie", selectedMovie);
     }
   });
