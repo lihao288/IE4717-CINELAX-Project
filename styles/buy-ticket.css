@@ -200,7 +200,7 @@
 .ticket-details-first-row,
 .ticket-details-second-row {
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 25% 75%;
 }
 
 .ticket-total {
@@ -212,7 +212,7 @@
 }
 
 .ticket-customer-info {
-  width: 25%;
+  width: 40%;
   padding: 10px 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -7,7 +7,7 @@ const rightArrow = document.querySelector(".showtimes-date-rightarrow");
 const dateSelectionContainer = document.querySelector(".showtimes-date");
 const dateSelection = document.querySelectorAll(".showtimes-timing");
 
-const timeSelectionContainer = document.querySelector(
+const timeSelectionContainer = document.querySelectorAll(
   ".showtimes-shows-timing"
 );
 
@@ -63,14 +63,9 @@ function checkDateSelection(e) {
   return true;
 }
 
-function accessParentElement() {
-  console.log();
-}
-
 // initialize
 calculateDate();
 localStorage.setItem("Date", today.toDateString());
-accessParentElement();
 
 leftArrow.addEventListener("click", () => {
   count--;
@@ -97,15 +92,23 @@ dateSelectionContainer.addEventListener("click", (e) => {
   }
 });
 
-timeSelectionContainer.addEventListener("click", (e) => {
-  if (e.target.classList.contains("showtimes-shows-selection")) {
-    // Save time
-    localStorage.setItem("Time", e.target.innerHTML);
+timeSelectionContainer.forEach((timeSelection) => {
+  timeSelection.addEventListener("click", (e) => {
+    if (e.target.classList.contains("showtimes-shows-selection")) {
+      // Save time
+      localStorage.setItem("Time", e.target.innerHTML);
 
-    // Save hall
-    let selectedHall =
-      e.target.parentElement.parentElement.parentElement.firstElementChild
-        .firstElementChild.innerHTML;
-    localStorage.setItem("Hall", selectedHall);
-  }
+      // Save hall
+      let selectedHall =
+        e.target.parentElement.parentElement.parentElement.firstElementChild
+          .firstElementChild.innerHTML;
+      localStorage.setItem("Hall", selectedHall);
+
+      // Get Movie and Save it to localStorage
+      let selectedMovie =
+        e.target.parentElement.previousElementSibling.firstElementChild
+          .innerHTML;
+      localStorage.setItem("Movie", selectedMovie);
+    }
+  });
 });
