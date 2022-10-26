@@ -16,14 +16,22 @@ const totalAmount = document.getElementById("ticket-price");
 const ticketPrice = 10.5;
 const convenienceFee = 2.0;
 
+function resizeInput() {
+  this.style.width = this.value.length + "ch";
+}
+
 function fetchData() {
   date.innerHTML = localStorage.getItem("Date");
   hall.innerHTML = localStorage.getItem("Hall");
   time.innerHTML = localStorage.getItem("Time");
-  movie.innerHTML = localStorage.getItem("Movie");
+  // movie.innerHTML = localStorage.getItem("Movie");
+
+  movie.value = localStorage.getItem("Movie");
+  movie.addEventListener("input", resizeInput);
+  resizeInput.call(movie);
 
   // Display Poster
-  switch (movie.innerHTML) {
+  switch (movie.value) {
     case "Ant-Man":
       moviePoster.src = "./movie images & videos/Ant-man/Ant-Man.jpeg";
       break;
@@ -79,10 +87,7 @@ function updateSelectedCount() {
 
 function updatePrice(quantity) {
   let totalPrice = quantity * ticketPrice + convenienceFee;
-  totalPrice.toFixed(2);
-  console.log(totalPrice);
-
-  totalAmount.innerText = totalPrice;
+  totalAmount.innerText = totalPrice.toFixed(2);
 }
 
 // Initialize
