@@ -126,3 +126,9 @@
   color: var(--bg-color);
   text-decoration: none;
 }
+
+/* .sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+} */
