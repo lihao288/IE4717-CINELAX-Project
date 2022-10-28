@@ -19,9 +19,40 @@
   $quantity = $_POST['seat-count'];
   $selectedSeats = $_POST['ticket-cinema-seat-selected'];
 
-  if ($movie == null && $date == null && $time == null && $quantity == null && $selectedSeats == null) {
-    echo "Please select at least one seat.";
+  if (!isset($_POST['ticket-cinema-seat-selected']) || $quantity == 0) {
+    echo "No movie has been selected.";
     exit;
+  }
+
+  $customerName = $_POST['customer-name'];
+  $customerMobileNo = $_POST['customer-mobileno'];
+  $customerEmail = $_POST['customer-email'];
+
+  switch ($movie) {
+    case 'Ant-Man':
+      $tableName = 'ant_man';
+      break;
+    case 'Black Panther':
+      $tableName = 'black_panther';
+      break;
+    case 'Doctor Strange in the Multiverse of Madness':
+      $tableName = 'doctor_strange';
+      break;
+    case 'Eternals':
+      $tableName = 'eternals';
+      break;
+    case 'Guardians of the Galaxy':
+      $tableName = 'guardians';
+      break;
+    case 'Shang-Chi':
+      $tableName = 'shangchi';
+      break;
+    case 'Spider-Man: No Way Home':
+      $tableName = 'spiderman';
+      break;
+    case 'Thor: Love and Thunder':
+      $tableName = 'thor';
+      break;
   }
 
   // Create connection
@@ -31,24 +62,38 @@
     die("Connection failed: " . mysqli_connect_error());
   }
 
-  // Prepare and bind parameters
-  $query = "INSERT INTO ant_man(OrderId, Movie, BookingDate, BookingTime, Quantity, SelectedSeats) VALUES (UUID_SHORT(), 'Ant-Man', 'Wed Oct 26 2022', '10:30 AM', 3, 'A03,A04,A05')";
-  // $query = "insert into orders (coffee, type, total_price, quantity) values (?, ?, ?, ?)";
-  // $stmt = $db->prepare($query);
-  // $stmt->bind_param('ssdi', $coffee, $type, $price, $quantity);
-
-  $stmt->execute();
-
-  // $stmt will be TRUE if insertion is successful
-  if ($stmt) {
-    echo  $stmt->affected_rows . " order inserted into database.";
-    $stmt->close();
-  } else {
-    echo "An error has occurred.  The item was not added.";
+  function generate_random_letters()
+  {
+    $random = '';
+    for ($i = 0; $i < 6; $i++) {
+      $random .= rand(0, 1) ? rand(0, 9) : chr(rand(ord('a'), ord('z')));
+    }
+    return $random;
   }
 
-  $db->close();
+  $orderID = generate_random_letters();
 
+  date_default_timezone_set('Asia/Singapore');
+  $transactionTime = date('Y/m/d H:i:s');
+
+  // Prepare and bind parameters
+  $query = "INSERT INTO " . $tableName . "(OrderId, Movie, BookingDate, BookingTime, Quantity, SelectedSeats, TransactionTime) VALUES ('" . $orderID . "', '" . $movie . "', '" . $date . "', '" . $time . "', " . $quantity . ", '" . $selectedSeats . "', '" . $transactionTime . "');";
+  $query .= "INSERT INTO customers_info (OrderId, CustomerName, CustomerMobileNo, CustomerEmail) VALUES ('" . $orderID . "', '" . $customerName . "', '" . $customerMobileNo . "', '" . $customerEmail . "');";
+  // $query = "INSERT INTO ant_man(OrderId, Movie, BookingDate, BookingTime, Quantity, SelectedSeats) VALUES (?, ?, ?, ?, ?, ?)";
+  // $stmt = $db->prepare($query);
+  // $stmt->bind_param('isssis', UUID_SHORT(),);
+  // $stmt->execute();
+
+  $result = $db->multi_query($query);
+
+
+  // $stmt will be TRUE if insertion is successful
+  if ($result) {
+    echo $db->affected_rows . " order inserted into database.";
+    $db->close();
+  } else {
+    echo "An error has occurred. The item was not added.";
+  }
   ?>
 </body>
 

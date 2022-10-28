@@ -16,6 +16,10 @@ const totalAmount = document.getElementById("ticket-price");
 const ticketPrice = 10.5;
 const convenienceFee = 2.0;
 
+const customerName = document.getElementById("customer-name");
+const customerMobile = document.getElementById("customer-mobileno");
+const customerEmail = document.getElementById("customer-email");
+
 function resizeInput() {
   if (this.value.length > 40) {
     this.style.width = (this.value.length + 5) * 8 + "px";
@@ -100,6 +104,82 @@ function updatePrice(quantity) {
   totalAmount.innerText = totalPrice.toFixed(2);
 }
 
+function checkValue() {
+  if (count.value == 0) {
+    alert("No seat has been selected. Please select at least one seat.");
+    return false;
+  }
+  return true;
+}
+
+function name_field_check(event) {
+  var name_field = event.currentTarget;
+  // console.log(name_field);
+
+  var pos = name_field.value.search(/^[A-Za-z\s]+$/);
+
+  console.log(pos);
+
+  if (pos != 0) {
+    alert(
+      "The name you entered (" +
+        name_field.value +
+        ") is not in the correct form. \n" +
+        "It should contain alphabet characters and character spaces."
+    );
+    name_field.focus();
+    name_field.select();
+    return false;
+  }
+}
+
+function mobile_field_check(event) {
+  var mobile_field = event.currentTarget;
+  // console.log(mobile_field);
+
+  var pos = mobile_field.value.search(/^[0-9]{8}$/);
+
+  console.log(pos);
+
+  if (pos != 0) {
+    alert(
+      "The mobile no. you entered (" +
+        mobile_field.value +
+        ") is not in the correct form. \n" +
+        "It should contain exactly 8 digits and only numbers are allowerd."
+    );
+    mobile_field.focus();
+    mobile_field.select();
+    return false;
+  }
+}
+
+function email_field_check(event) {
+  var email_field = event.currentTarget;
+  // console.log(email_field);
+
+  // var pos = email_field.value.search(
+  //   /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}){1,3}$/
+  // );
+  var pos = email_field.value.search(
+    /^\w+([\.-]?\w+)*@\w+(\.\w+){0,2}(\.\w{2,3})$/
+  );
+
+  console.log(pos);
+
+  if (pos != 0) {
+    alert(
+      "The email you entered (" +
+        email_field.value +
+        ") is not in the correct form. \n" +
+        "It should contain a user name part follows by “@” and a domain name part. The user name contains word characters including hyphen (“-”) and period (“.”). The domain name contains two to four address extensions. Each extension is string of word characters and separated from the others by a period (“.”). The last extension must have two to three characters."
+    );
+    email_field.focus();
+    email_field.select();
+    return false;
+  }
+}
+
 // Initialize
 window.onload = fetchData();
 
@@ -125,3 +205,7 @@ container.addEventListener("click", (e) => {
 
   updateSelectedCount();
 });
+
+customerName.addEventListener("change", name_field_check, false);
+customerMobile.addEventListener("change", mobile_field_check, false);
+customerEmail.addEventListener("change", email_field_check, false);

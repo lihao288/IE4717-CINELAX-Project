@@ -50,6 +50,7 @@
               action="php/save-info.php"
               class="ticket-customer-form"
               method="post"
+              onsubmit="return checkValue();"
             >
               <div class="ticket-seating-plan">
                 <ul class="ticket-showcase">
@@ -167,7 +168,8 @@
                   class="information center"
                   size="1"
                   value="0"
-                  disabled
+                  readonly
+                    onfocus="this.blur();"
                 />seat(s).
                   <!-- with seat number(s): <span id="seat-number"></span>. -->
                 </p>
@@ -181,7 +183,8 @@
                     id="movie-name"
                     class="information ticket-underline"
                     size=""
-                    disabled
+                    readonly
+                    onfocus="this.blur();"
                   />at
                   <span class="ticket-underline" id="cinema-branch"
                     >Jurong Point</span
@@ -198,7 +201,8 @@
                         id="ticket-date-selected"
                         class="information"
                         size=""
-                        disabled
+                        readonly
+                        onfocus="this.blur();"
                       />
                       </p>
                     </div>
@@ -211,7 +215,8 @@
                         id="ticket-cinema-hall-selected"
                         class="information"
                         size=""
-                        disabled
+                        readonly
+                        onfocus="this.blur();"
                       />
                       </p>
                     </div>
@@ -226,7 +231,8 @@
                         id="ticket-time-selected"
                         class="information"
                         size=""
-                        disabled
+                        readonly
+                        onfocus="this.blur();"
                       />
                       </p>
                     </div>
@@ -239,7 +245,8 @@
                         id="ticket-cinema-seat-selected"
                         class="information"
                         size=""
-                        disabled
+                        readonly
+                        onfocus="this.blur();"
                       />
                       </p>
                     </div>
@@ -257,16 +264,17 @@
                   name="customer-name"
                   id="customer-name"
                   class="customer-name"
+                  required
                 />
                 <label for="customer-mobileno" class="customer-mobileno"
                   >Mobile-No:
                 </label>
                 <input
-                  type="tel"
+                  type="text"
                   name="customer-mobileno"
                   id="customer-mobileno"
                   class="customer-mobileno"
-                  pattern="[0-9]{8}"
+                  required
                 />
                 <label for="customer-email" class="customer-email"
                   >Email:
@@ -276,6 +284,7 @@
                   name="customer-email"
                   id="customer-email"
                   class="customer-email"
+                  required
                 />
               </div>
 
