@@ -16,6 +16,7 @@
   $movie = $_POST['movie-name'];
   $date = $_POST['ticket-date-selected'];
   $time = $_POST['ticket-time-selected'];
+  $hall = $_POST['ticket-cinema-hall-selected'];
   $quantity = $_POST['seat-count'];
   $selectedSeats = $_POST['ticket-cinema-seat-selected'];
 
@@ -77,7 +78,7 @@
   $transactionTime = date('Y/m/d H:i:s');
 
   // Prepare and bind parameters
-  $query = "INSERT INTO " . $tableName . "(OrderId, Movie, BookingDate, BookingTime, Quantity, SelectedSeats, TransactionTime) VALUES ('" . $orderID . "', '" . $movie . "', '" . $date . "', '" . $time . "', " . $quantity . ", '" . $selectedSeats . "', '" . $transactionTime . "');";
+  $query = "INSERT INTO " . $tableName . "(OrderId, Movie, BookingDate, BookingTime, Hall, Quantity, SelectedSeats, TransactionTime) VALUES ('" . $orderID . "', '" . $movie . "', '" . $date . "', '" . $time . "', '" . $hall . "', " . $quantity . ", '" . $selectedSeats . "', '" . $transactionTime . "');";
   $query .= "INSERT INTO customers_info (OrderId, CustomerName, CustomerMobileNo, CustomerEmail) VALUES ('" . $orderID . "', '" . $customerName . "', '" . $customerMobileNo . "', '" . $customerEmail . "');";
   // $query = "INSERT INTO ant_man(OrderId, Movie, BookingDate, BookingTime, Quantity, SelectedSeats) VALUES (?, ?, ?, ?, ?, ?)";
   // $stmt = $db->prepare($query);
