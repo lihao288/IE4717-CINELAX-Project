@@ -9,6 +9,10 @@
 </head>
 
 <?php
+
+session_start();
+// var_dump($_SESSION);
+
 $servername = "localhost";
 $username = "f32ee";
 $password = "f32ee";
@@ -78,6 +82,9 @@ $orderID = generate_random_letters();
 date_default_timezone_set('Asia/Singapore');
 $transactionTime = date('Y/m/d H:i:s');
 
+$_SESSION['movieName'] = $movie;
+$_SESSION['orderID'] = $orderID;
+
 // Prepare and bind parameters
 $queryToMovie = "INSERT INTO " . $tableName . "(OrderId, Movie, BookingDate, BookingTime, Hall, Quantity, SelectedSeats, TransactionTime) VALUES ('" . $orderID . "', '" . $movie . "', '" . $date . "', '" . $time . "', '" . $hall . "', " . $quantity . ", '" . $selectedSeats . "', '" . $transactionTime . "');";
 $queryToCustomer = "INSERT INTO customers_info (OrderId, CustomerName, CustomerMobileNo, CustomerEmail) VALUES ('" . $orderID . "', '" . $customerName . "', '" . $customerMobileNo . "', '" . $customerEmail . "');";
@@ -136,6 +143,8 @@ $total = $subTicket + $subConvenience;
       </div>
     </nav>
   </header>
+  <input type="hidden" name="orderID" id="orderID">
+  <input type="hidden" name="movieName" id="movieName">
   <main class="payment-container">
     <div class="payment-content">
       <div class="ticket-steps">
@@ -183,16 +192,31 @@ $total = $subTicket + $subConvenience;
       </div>
       <div class="payment-method">
         <h2 class="payment-method-heading">Payment Method</h2>
-        <div class="payment-method-content">
-          <a href="../confirmation.html"><img src="../movie images & videos/Payment/visa.jpg" alt="" /></a>
-          <a href="../confirmation.html"><img src="../movie images & videos/Payment/mastercard.png" alt="" /></a>
-          <a href="../confirmation.html"><img src="../movie images & videos/Payment/paynow.jpg" alt="" /></a>
-        </div>
+        <form class="payment-method-content" action="confirmation.php" method="POST">
+          <div class="input-container">
+            <input type="image" src="../movie images & videos/Payment/visa.jpg" alt="">
+          </div>
+          <div class="input-container">
+            <input type="image" src="../movie images & videos/Payment/mastercard.png" alt="">
+          </div>
+          <div class="input-container">
+            <input type="image" src="../movie images & videos/Payment/paynow.jpg" alt="">
+          </div>
+        </form>
       </div>
     </div>
   </main>
   <!-- Script -->
-  <script src="script.js"></script>
+  <script>
+    let orderID = '<?php echo $orderID ?>';
+    localStorage.setItem('orderID', orderID);
+
+    const orderID = document.getElementById('orderID');
+    const movieName = document.getElementById('movieName');
+
+    orderID.value = localStorage.getItem('orderID');
+    movieName.value = localStorage.getItem('Movie');
+  </script>
 </body>
 
 </html>

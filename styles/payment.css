@@ -109,7 +109,7 @@ td:not(.first-row) {
   align-items: center;
 }
 
-.payment-method-content a {
+.input-container {
   width: 150px;
   height: 150px;
   background-color: white;
@@ -118,6 +118,6 @@ td:not(.first-row) {
   align-items: center;
 }
 
-.payment-method-content a img {
+.input-container input[type="image"] {
   width: 100%;
 }
