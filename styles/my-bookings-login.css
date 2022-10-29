@@ -1,15 +1,22 @@
 @import url(basic-design.css);
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .my-bookings-login-container {
-    max-width: 95%;
-    padding: 0 20px;
-    margin: 0 15%;
-  }
+  max-width: 95%;
+  padding: 0 20px;
+  margin: 0 15%;
+  display: flex;
+  flex-direction: column;
+}
 
 .my-bookings-login-container h5 {
-    padding: 20px 0px 10px 0px;
-    color: var(--text-color);
-    font-size: large;
+  padding: 20px 0px 10px 0px;
+  color: var(--text-color);
+  font-size: large;
 }
 
 .my-bookings-login-container h4 {
@@ -32,7 +39,7 @@
 }
 
 .my-bookings-login-text a {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .login-button {
@@ -62,4 +69,8 @@
 .login-button a:hover {
   color: var(--text-color);
   background-color: #21325e;
+}
+
+footer {
+  margin-top: auto;
 }
