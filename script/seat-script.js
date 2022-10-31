@@ -47,34 +47,34 @@ function fetchData() {
   // Display Poster
   switch (movie.value) {
     case "Ant-Man":
-      moviePoster.src = "./movie images & videos/Ant-man/Ant-Man.jpeg";
+      moviePoster.src = "../movie images & videos/Ant-man/Ant-Man.jpeg";
       break;
     case "Black Panther":
       moviePoster.src =
-        "./movie images & videos/Black Panther/Black Panther.jpeg ";
+        "../movie images & videos/Black Panther/Black Panther.jpeg ";
       break;
     case "Doctor Strange in the Multiverse of Madness":
       moviePoster.src =
-        "./movie images & videos/Doctor Strange/Doctor Strange in the Multiverse of Madness.jpeg ";
+        "../movie images & videos/Doctor Strange/Doctor Strange in the Multiverse of Madness.jpeg ";
       break;
     case "Eternals":
-      moviePoster.src = "./movie images & videos/Eternals/Eternals.jpeg ";
+      moviePoster.src = "../movie images & videos/Eternals/Eternals.jpeg ";
       break;
     case "Guardians of the Galaxy":
       moviePoster.src =
-        "./movie images & videos/Guardians of the Galaxy/Guardians of the Galaxy.jpeg ";
+        "../movie images & videos/Guardians of the Galaxy/Guardians of the Galaxy.jpeg ";
       break;
     case "Shang-Chi":
       moviePoster.src =
-        "./movie images & videos/Shang Chi/Shang-Chi and The Legend of The Ten Rings.jpeg ";
+        "../movie images & videos/Shang Chi/Shang-Chi and The Legend of The Ten Rings.jpeg ";
       break;
     case "Spider-Man: No Way Home":
       moviePoster.src =
-        "./movie images & videos/Spider-man/Spider-Man- No Way Home.jpeg ";
+        "../movie images & videos/Spider-man/Spider-Man- No Way Home.jpeg ";
       break;
     case "Thor: Love and Thunder":
       moviePoster.src =
-        "./movie images & videos/Thor/Thor- Love and Thunder poster.jpeg ";
+        "../movie images & videos/Thor/Thor- Love and Thunder poster.jpeg ";
       break;
   }
 }

@@ -42,42 +42,59 @@
                 />
               </a>
             </div>
-            <div class="showtimes-shows-details">
-              <h2 class="showtimes-shows-title">Ant-Man</h2>
-              <div class="showtimes-shows-class-and-duration">
-                <p class="showtimes-shows-classification">PG-13</p>
-                <p class="showtimes-shows-duration">118 minutes</p>
+            <form
+              action="php/retrieve-seats.php"
+              name="form_1"
+              class="showtimes-shows-form"
+              method="post"
+            >
+              <div class="showtimes-shows-details">
+                <input
+                  type="text"
+                  name="movie_1"
+                  id="movie_1"
+                  class="showtimes-shows-title"
+                  value="Ant-Man"
+                  readonly
+                  onfocus="this.blur()"
+                />
+                <div class="showtimes-shows-class-and-duration">
+                  <p class="showtimes-shows-classification">PG-13</p>
+                  <p class="showtimes-shows-duration">118 minutes</p>
+                </div>
+                <p class="showtimes-shows-rating">
+                  Rating: 7.3 / 10 <em>(IMDb)</em>
+                </p>
               </div>
-              <p class="showtimes-shows-rating">
-                Rating: 7.3 / 10 <em>(IMDb)</em>
-              </p>
-            </div>
-            <div class="showtimes-shows-timing">
-              <a
-                href="seat-selection-and-personal-details.html"
-                class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >10:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
-                class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >12:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
-                class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >2:30 PM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
-                class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >4:30 PM</a
-              >
-            </div>
+              <div class="showtimes-shows-timing">
+                <input
+                  type="submit"
+                  value="10:30 AM"
+                  name="submit_1"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="12:30 AM"
+                  name="submit_1"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="2:30 PM"
+                  name="submit_1"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="4:30 PM"
+                  name="submit_1"
+                  class="showtimes-shows-selection"
+                />
+                <input type="text" name="time_1" id="time_1" hidden />
+                <input type="text" name="date_1" id="date_1" hidden />
+              </div>
+            </form>
           </div>
         </div>
         <div class="showtimes-halls" id="black-panther">
@@ -95,42 +112,59 @@
                 />
               </a>
             </div>
-            <div class="showtimes-shows-details">
-              <h2 class="showtimes-shows-title">Black Panther</h2>
-              <div class="showtimes-shows-class-and-duration">
-                <p class="showtimes-shows-classification">PG-13</p>
-                <p class="showtimes-shows-duration">134 minutes</p>
+            <form
+              action="php/retrieve-seats.php"
+              name="form_2"
+              class="showtimes-shows-form"
+              method="post"
+            >
+              <div class="showtimes-shows-details">
+                <input
+                  type="text"
+                  name="movie_2"
+                  id="movie_2"
+                  class="showtimes-shows-title"
+                  value="Black Panther"
+                  readonly
+                  onfocus="this.blur()"
+                />
+                <div class="showtimes-shows-class-and-duration">
+                  <p class="showtimes-shows-classification">PG-13</p>
+                  <p class="showtimes-shows-duration">134 minutes</p>
+                </div>
+                <p class="showtimes-shows-rating">
+                  Rating: 7.3 / 10 <em>(IMDb)</em>
+                </p>
               </div>
-              <p class="showtimes-shows-rating">
-                Rating: 7.3 / 10 <em>(IMDb)</em>
-              </p>
-            </div>
-            <div class="showtimes-shows-timing">
-              <a
-                href="seat-selection-and-personal-details.html"
-                class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >10:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
-                class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >12:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
-                class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >2:30 PM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
-                class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >4:30 PM</a
-              >
-            </div>
+              <div class="showtimes-shows-timing">
+                <input
+                  type="submit"
+                  value="10:30 AM"
+                  name="submit_2"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="12:30 AM"
+                  name="submit_2"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="2:30 PM"
+                  name="submit_2"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="4:30 PM"
+                  name="submit_2"
+                  class="showtimes-shows-selection"
+                />
+                <input type="text" name="time_2" id="time_2" hidden />
+                <input type="text" name="date_2" id="date_2" hidden />
+              </div>
+            </form>
           </div>
         </div>
         <div class="showtimes-halls" id="doctor-strange">
@@ -160,30 +194,38 @@
               </p>
             </div>
             <div class="showtimes-shows-timing">
-              <a
-                href="seat-selection-and-personal-details.html"
+              <input
+                type="submit"
+                value="10:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >10:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="12:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >12:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="2:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >2:30 PM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="4:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >4:30 PM</a
-              >
+              />
+              <input
+                type="text"
+                name="showtimes-shows-selection"
+                id="showtimes-shows-selection"
+                hidden
+              />
+              <input
+                type="text"
+                name="showtimes-shows-date"
+                id="showtimes-shows-date"
+                hidden
+              />
             </div>
           </div>
         </div>
@@ -213,30 +255,38 @@
               </p>
             </div>
             <div class="showtimes-shows-timing">
-              <a
-                href="seat-selection-and-personal-details.html"
+              <input
+                type="submit"
+                value="10:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >10:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="12:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >12:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="2:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >2:30 PM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="4:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >4:30 PM</a
-              >
+              />
+              <input
+                type="text"
+                name="showtimes-shows-selection"
+                id="showtimes-shows-selection"
+                hidden
+              />
+              <input
+                type="text"
+                name="showtimes-shows-date"
+                id="showtimes-shows-date"
+                hidden
+              />
             </div>
           </div>
         </div>
@@ -266,30 +316,38 @@
               </p>
             </div>
             <div class="showtimes-shows-timing">
-              <a
-                href="seat-selection-and-personal-details.html"
+              <input
+                type="submit"
+                value="10:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >10:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="12:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >12:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="2:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >2:30 PM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="4:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >4:30 PM</a
-              >
+              />
+              <input
+                type="text"
+                name="showtimes-shows-selection"
+                id="showtimes-shows-selection"
+                hidden
+              />
+              <input
+                type="text"
+                name="showtimes-shows-date"
+                id="showtimes-shows-date"
+                hidden
+              />
             </div>
           </div>
         </div>
@@ -319,30 +377,38 @@
               </p>
             </div>
             <div class="showtimes-shows-timing">
-              <a
-                href="seat-selection-and-personal-details.html"
+              <input
+                type="submit"
+                value="10:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >10:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="12:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >12:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="2:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >2:30 PM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="4:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >4:30 PM</a
-              >
+              />
+              <input
+                type="text"
+                name="showtimes-shows-selection"
+                id="showtimes-shows-selection"
+                hidden
+              />
+              <input
+                type="text"
+                name="showtimes-shows-date"
+                id="showtimes-shows-date"
+                hidden
+              />
             </div>
           </div>
         </div>
@@ -372,30 +438,38 @@
               </p>
             </div>
             <div class="showtimes-shows-timing">
-              <a
-                href="seat-selection-and-personal-details.html"
+              <input
+                type="submit"
+                value="10:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >10:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="12:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >12:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="2:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >2:30 PM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="4:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >4:30 PM</a
-              >
+              />
+              <input
+                type="text"
+                name="showtimes-shows-selection"
+                id="showtimes-shows-selection"
+                hidden
+              />
+              <input
+                type="text"
+                name="showtimes-shows-date"
+                id="showtimes-shows-date"
+                hidden
+              />
             </div>
           </div>
         </div>
@@ -425,30 +499,38 @@
               </p>
             </div>
             <div class="showtimes-shows-timing">
-              <a
-                href="seat-selection-and-personal-details.html"
+              <input
+                type="submit"
+                value="10:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >10:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="12:30 AM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >12:30 AM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="2:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >2:30 PM</a
-              >
-              <a
-                href="seat-selection-and-personal-details.html"
+              />
+              <input
+                type="submit"
+                value="4:30 PM"
                 class="showtimes-shows-selection"
-                onclick="return checkDateSelection()"
-                >4:30 PM</a
-              >
+              />
+              <input
+                type="text"
+                name="showtimes-shows-selection"
+                id="showtimes-shows-selection"
+                hidden
+              />
+              <input
+                type="text"
+                name="showtimes-shows-date"
+                id="showtimes-shows-date"
+                hidden
+              />
             </div>
           </div>
         </div>

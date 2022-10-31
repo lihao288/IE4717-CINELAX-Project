@@ -11,6 +11,10 @@ const timeSelectionContainer = document.querySelectorAll(
   ".showtimes-shows-timing"
 );
 
+var movieName;
+var timeSelected;
+var dateSelected;
+
 var count = 0;
 const today = new Date();
 var isSelected = false;
@@ -95,20 +99,28 @@ dateSelectionContainer.addEventListener("click", (e) => {
 timeSelectionContainer.forEach((timeSelection) => {
   timeSelection.addEventListener("click", (e) => {
     if (e.target.classList.contains("showtimes-shows-selection")) {
+      let currentIndex = e.target.name.substring(e.target.name.length - 1);
+      // console.log(currentIndex);
+
       // Save time
-      localStorage.setItem("Time", e.target.innerHTML);
+      localStorage.setItem("Time", e.target.value);
+      timeSelected = document.getElementById("time_" + currentIndex);
+      timeSelected.value = e.target.value;
 
       // Save hall
       let selectedHall =
-        e.target.parentElement.parentElement.parentElement.firstElementChild
-          .firstElementChild.innerHTML;
+        e.target.parentElement.parentElement.parentElement.parentElement
+          .firstElementChild.firstElementChild.innerHTML;
       localStorage.setItem("Hall", selectedHall);
 
       // Get Movie and Save it to localStorage
-      let selectedMovie =
-        e.target.parentElement.previousElementSibling.firstElementChild
-          .innerHTML;
-      localStorage.setItem("Movie", selectedMovie);
+      movieName = document.getElementById("movie_" + currentIndex);
+      localStorage.setItem("Movie", movieName.value);
+
+      // Get Date
+      let selectedDate = localStorage.getItem("Date");
+      dateSelected = document.getElementById("date_" + currentIndex);
+      dateSelected.value = selectedDate;
     }
   });
 });

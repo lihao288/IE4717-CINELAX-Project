@@ -127,6 +127,8 @@ $count = $_SESSION['count'];
       echo "<h4>There is no booking details found under " . $inputName . " and " . $inputEmail . ".</h4>";
       echo "<h4>Please click the button below to book a movie.</h4>";
       echo "<a href='../showtimes.html' class='booking-button'>Book a Movie</a>";
+
+      session_destroy();
     }
 
     if ($userFound && $count > 0) {
