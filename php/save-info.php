@@ -85,8 +85,10 @@ $transactionTime = date('Y/m/d H:i:s');
 $_SESSION['movieName'] = $movie;
 $_SESSION['orderID'] = $orderID;
 
+$payment = FALSE;
+
 // Prepare and bind parameters
-$queryToMovie = "INSERT INTO " . $tableName . "(OrderId, Movie, BookingDate, BookingTime, Hall, Quantity, SelectedSeats, TransactionTime) VALUES ('" . $orderID . "', '" . $movie . "', '" . $date . "', '" . $time . "', '" . $hall . "', " . $quantity . ", '" . $selectedSeats . "', '" . $transactionTime . "');";
+$queryToMovie = "INSERT INTO " . $tableName . "(OrderId, Movie, BookingDate, BookingTime, Hall, Quantity, SelectedSeats, TransactionTime, PaymentDone) VALUES ('" . $orderID . "', '" . $movie . "', '" . $date . "', '" . $time . "', '" . $hall . "', " . $quantity . ", '" . $selectedSeats . "', '" . $transactionTime . "', " . ($payment ? 1 : 0) . ");";
 $queryToCustomer = "INSERT INTO customers_info (OrderId, CustomerName, CustomerMobileNo, CustomerEmail) VALUES ('" . $orderID . "', '" . $customerName . "', '" . $customerMobileNo . "', '" . $customerEmail . "');";
 // $query = "INSERT INTO ant_man(OrderId, Movie, BookingDate, BookingTime, Quantity, SelectedSeats) VALUES (?, ?, ?, ?, ?, ?)";
 // $stmt = $db->prepare($query);

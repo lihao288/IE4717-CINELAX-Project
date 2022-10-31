@@ -69,6 +69,14 @@ for ($i = 0; $i < $num_results; $i++) {
   $time = $row['BookingTime'];
 }
 
+$payment = TRUE;
+
+$query = "UPDATE " . $tableName . " SET PaymentDone = " . ($payment ? 1 : 0) . " WHERE OrderID = '" . $orderID . "';";
+$stmt = $db->prepare($query);
+$stmt->execute();
+
+session_destroy();
+
 ?>
 
 <body>
@@ -114,7 +122,7 @@ for ($i = 0; $i < $num_results; $i++) {
         <p>Thank you! <br /></p>
         <p class="small">You may leave this page now.</p>
       </div>
-      <a href="index.html" class="home-button">Back to Home</a>
+      <a href="../index.html" class="home-button">Back to Home</a>
     </div>
   </main>
   <!-- Script -->

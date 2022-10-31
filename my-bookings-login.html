@@ -25,11 +25,28 @@
       <div class="my-bookings-login-container">
         <h4>Check your bookings by logging in:</h4>
         <h5>Review/Cancel any bookings you have made.</h5>
-        <div class="my-bookings-login-text">
-          <p>Name:</p>
-          <p>E-mail:</p>
-        </div>
-        <a class="login-button" href="my-bookings.html">Login</a>
+        <form action="php/retrieve-info.php" method="post">
+          <div class="my-bookings-login-box">
+            <div class="my-bookings-login-text">
+              <label for="customer-name">Name: </label>
+              <input
+                type="text"
+                name="customer-name"
+                id="customer-name"
+                required
+              />
+              <label for="customer-email" class="customer-email">Email: </label>
+              <input
+                type="text"
+                name="customer-email"
+                id="customer-email"
+                class="customer-email"
+                required
+              />
+            </div>
+          </div>
+          <input type="submit" value="Login" class="login-button" />
+        </form>
       </div>
     </main>
     <footer>
@@ -47,5 +64,6 @@
       </div>
     </footer>
     <!-- Script -->
+    <script src="script/login-script.js"></script>
   </body>
 </html>

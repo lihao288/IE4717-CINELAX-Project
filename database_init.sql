@@ -21,6 +21,7 @@ CREATE TABLE ant_man (
   Quantity INT(3) NOT NULL ,
   SelectedSeats VARCHAR(60) NOT NULL ,
   TransactionTime VARCHAR(30) NOT NULL ,
+  PaymentDone BOOLEAN NOT NULL ,
   PRIMARY KEY (OrderID)) 
   ENGINE = InnoDB; 
   
@@ -33,6 +34,7 @@ CREATE TABLE black_panther (
   Quantity INT(3) NOT NULL ,
   SelectedSeats VARCHAR(60) NOT NULL ,
   TransactionTime VARCHAR(30) NOT NULL ,
+  PaymentDone BOOLEAN NOT NULL ,
   PRIMARY KEY (OrderID)) 
   ENGINE = InnoDB; 
 
@@ -45,6 +47,7 @@ CREATE TABLE doctor_strange (
   Quantity INT(3) NOT NULL ,
   SelectedSeats VARCHAR(60) NOT NULL ,
   TransactionTime VARCHAR(30) NOT NULL ,
+  PaymentDone BOOLEAN NOT NULL ,
   PRIMARY KEY (OrderID)) 
   ENGINE = InnoDB; 
 
@@ -57,6 +60,7 @@ CREATE TABLE eternals (
   Quantity INT(3) NOT NULL ,
   SelectedSeats VARCHAR(60) NOT NULL ,
   TransactionTime VARCHAR(30) NOT NULL ,
+  PaymentDone BOOLEAN NOT NULL ,
   PRIMARY KEY (OrderID)) 
   ENGINE = InnoDB; 
 
@@ -69,6 +73,7 @@ CREATE TABLE guardians (
   Quantity INT(3) NOT NULL ,
   SelectedSeats VARCHAR(60) NOT NULL ,
   TransactionTime VARCHAR(30) NOT NULL ,
+  PaymentDone BOOLEAN NOT NULL ,
   PRIMARY KEY (OrderID)) 
   ENGINE = InnoDB; 
 
@@ -81,6 +86,7 @@ CREATE TABLE shangchi (
   Quantity INT(3) NOT NULL ,
   SelectedSeats VARCHAR(60) NOT NULL ,
   TransactionTime VARCHAR(30) NOT NULL ,
+  PaymentDone BOOLEAN NOT NULL ,
   PRIMARY KEY (OrderID)) 
   ENGINE = InnoDB; 
 
@@ -93,6 +99,7 @@ CREATE TABLE spiderman (
   Quantity INT(3) NOT NULL ,
   SelectedSeats VARCHAR(60) NOT NULL ,
   TransactionTime VARCHAR(30) NOT NULL ,
+  PaymentDone BOOLEAN NOT NULL ,
   PRIMARY KEY (OrderID)) 
   ENGINE = InnoDB; 
 
@@ -105,6 +112,7 @@ CREATE TABLE thor (
   Quantity INT(3) NOT NULL ,
   SelectedSeats VARCHAR(60) NOT NULL ,
   TransactionTime VARCHAR(30) NOT NULL ,
+  PaymentDone BOOLEAN NOT NULL ,
   PRIMARY KEY (OrderID)) 
   ENGINE = InnoDB; 
 
