@@ -182,51 +182,59 @@
                 />
               </a>
             </div>
-            <div class="showtimes-shows-details">
-              <!-- prettier-ignore -->
-              <h2 class="showtimes-shows-title">Doctor Strange in the Multiverse of Madness</h2>
-              <div class="showtimes-shows-class-and-duration">
-                <p class="showtimes-shows-classification">PG-13</p>
-                <p class="showtimes-shows-duration">126 minutes</p>
+            <form
+              action="php/retrieve-seats.php"
+              name="form_3"
+              class="showtimes-shows-form"
+              method="post"
+            >
+              <div class="showtimes-shows-details">
+                <input
+                  type="text"
+                  name="movie_3"
+                  id="movie_3"
+                  class="showtimes-shows-title"
+                  value="Doctor Strange in the Multiverse of Madness"
+                  readonly
+                  onfocus="this.blur()"
+                />
+                <div class="showtimes-shows-class-and-duration">
+                  <p class="showtimes-shows-classification">PG-13</p>
+                  <p class="showtimes-shows-duration">126 minutes</p>
+                </div>
+                <p class="showtimes-shows-rating">
+                  Rating: 7.0 / 10 <em>(IMDb)</em>
+                </p>
               </div>
-              <p class="showtimes-shows-rating">
-                Rating: 7.0 / 10 <em>(IMDb)</em>
-              </p>
-            </div>
-            <div class="showtimes-shows-timing">
-              <input
-                type="submit"
-                value="10:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="12:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="2:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="4:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="text"
-                name="showtimes-shows-selection"
-                id="showtimes-shows-selection"
-                hidden
-              />
-              <input
-                type="text"
-                name="showtimes-shows-date"
-                id="showtimes-shows-date"
-                hidden
-              />
-            </div>
+              <div class="showtimes-shows-timing">
+                <input
+                  type="submit"
+                  value="10:30 AM"
+                  name="submit_3"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="12:30 AM"
+                  name="submit_3"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="2:30 PM"
+                  name="submit_3"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="4:30 PM"
+                  name="submit_3"
+                  class="showtimes-shows-selection"
+                />
+                <input type="text" name="time_3" id="time_3" hidden />
+                <input type="text" name="date_3" id="date_3" hidden />
+              </div>
+            </form>
           </div>
         </div>
         <div class="showtimes-halls" id="eternals">
@@ -244,50 +252,59 @@
                 />
               </a>
             </div>
-            <div class="showtimes-shows-details">
-              <h2 class="showtimes-shows-title">Eternals</h2>
-              <div class="showtimes-shows-class-and-duration">
-                <p class="showtimes-shows-classification">PG-13</p>
-                <p class="showtimes-shows-duration">156 minutes</p>
+            <form
+              action="php/retrieve-seats.php"
+              name="form_4"
+              class="showtimes-shows-form"
+              method="post"
+            >
+              <div class="showtimes-shows-details">
+                <input
+                  type="text"
+                  name="movie_4"
+                  id="movie_4"
+                  class="showtimes-shows-title"
+                  value="Eternals"
+                  readonly
+                  onfocus="this.blur()"
+                />
+                <div class="showtimes-shows-class-and-duration">
+                  <p class="showtimes-shows-classification">PG-13</p>
+                  <p class="showtimes-shows-duration">156 minutes</p>
+                </div>
+                <p class="showtimes-shows-rating">
+                  Rating: 6.3 / 10 <em>(IMDb)</em>
+                </p>
               </div>
-              <p class="showtimes-shows-rating">
-                Rating: 6.3 / 10 <em>(IMDb)</em>
-              </p>
-            </div>
-            <div class="showtimes-shows-timing">
-              <input
-                type="submit"
-                value="10:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="12:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="2:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="4:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="text"
-                name="showtimes-shows-selection"
-                id="showtimes-shows-selection"
-                hidden
-              />
-              <input
-                type="text"
-                name="showtimes-shows-date"
-                id="showtimes-shows-date"
-                hidden
-              />
-            </div>
+              <div class="showtimes-shows-timing">
+                <input
+                  type="submit"
+                  value="10:30 AM"
+                  name="submit_4"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="12:30 AM"
+                  name="submit_4"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="2:30 PM"
+                  name="submit_4"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="4:30 PM"
+                  name="submit_4"
+                  class="showtimes-shows-selection"
+                />
+                <input type="text" name="time_4" id="time_4" hidden />
+                <input type="text" name="date_4" id="date_4" hidden />
+              </div>
+            </form>
           </div>
         </div>
         <div class="showtimes-halls" id="guardians">
@@ -305,50 +322,59 @@
                 />
               </a>
             </div>
-            <div class="showtimes-shows-details">
-              <h2 class="showtimes-shows-title">Guardians of the Galaxy</h2>
-              <div class="showtimes-shows-class-and-duration">
-                <p class="showtimes-shows-classification">PG-13</p>
-                <p class="showtimes-shows-duration">122 minutes</p>
+            <form
+              action="php/retrieve-seats.php"
+              name="form_5"
+              class="showtimes-shows-form"
+              method="post"
+            >
+              <div class="showtimes-shows-details">
+                <input
+                  type="text"
+                  name="movie_5"
+                  id="movie_5"
+                  class="showtimes-shows-title"
+                  value="Guardians of the Galaxy"
+                  readonly
+                  onfocus="this.blur()"
+                />
+                <div class="showtimes-shows-class-and-duration">
+                  <p class="showtimes-shows-classification">PG-13</p>
+                  <p class="showtimes-shows-duration">122 minutes</p>
+                </div>
+                <p class="showtimes-shows-rating">
+                  Rating: 8.0 / 10 <em>(IMDb)</em>
+                </p>
               </div>
-              <p class="showtimes-shows-rating">
-                Rating: 8.0 / 10 <em>(IMDb)</em>
-              </p>
-            </div>
-            <div class="showtimes-shows-timing">
-              <input
-                type="submit"
-                value="10:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="12:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="2:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="4:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="text"
-                name="showtimes-shows-selection"
-                id="showtimes-shows-selection"
-                hidden
-              />
-              <input
-                type="text"
-                name="showtimes-shows-date"
-                id="showtimes-shows-date"
-                hidden
-              />
-            </div>
+              <div class="showtimes-shows-timing">
+                <input
+                  type="submit"
+                  value="10:30 AM"
+                  name="submit_5"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="12:30 AM"
+                  name="submit_5"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="2:30 PM"
+                  name="submit_5"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="4:30 PM"
+                  name="submit_5"
+                  class="showtimes-shows-selection"
+                />
+                <input type="text" name="time_5" id="time_5" hidden />
+                <input type="text" name="date_5" id="date_5" hidden />
+              </div>
+            </form>
           </div>
         </div>
         <div class="showtimes-halls" id="shang-chi">
@@ -366,50 +392,59 @@
                 />
               </a>
             </div>
-            <div class="showtimes-shows-details">
-              <h2 class="showtimes-shows-title">Shang-Chi</h2>
-              <div class="showtimes-shows-class-and-duration">
-                <p class="showtimes-shows-classification">PG-13</p>
-                <p class="showtimes-shows-duration">132 minutes</p>
+            <form
+              action="php/retrieve-seats.php"
+              name="form_6"
+              class="showtimes-shows-form"
+              method="post"
+            >
+              <div class="showtimes-shows-details">
+                <input
+                  type="text"
+                  name="movie_6"
+                  id="movie_6"
+                  class="showtimes-shows-title"
+                  value="Shang-Chi"
+                  readonly
+                  onfocus="this.blur()"
+                />
+                <div class="showtimes-shows-class-and-duration">
+                  <p class="showtimes-shows-classification">PG-13</p>
+                  <p class="showtimes-shows-duration">132 minutes</p>
+                </div>
+                <p class="showtimes-shows-rating">
+                  Rating: 7.4 / 10 <em>(IMDb)</em>
+                </p>
               </div>
-              <p class="showtimes-shows-rating">
-                Rating: 7.4 / 10 <em>(IMDb)</em>
-              </p>
-            </div>
-            <div class="showtimes-shows-timing">
-              <input
-                type="submit"
-                value="10:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="12:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="2:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="4:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="text"
-                name="showtimes-shows-selection"
-                id="showtimes-shows-selection"
-                hidden
-              />
-              <input
-                type="text"
-                name="showtimes-shows-date"
-                id="showtimes-shows-date"
-                hidden
-              />
-            </div>
+              <div class="showtimes-shows-timing">
+                <input
+                  type="submit"
+                  value="10:30 AM"
+                  name="submit_6"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="12:30 AM"
+                  name="submit_6"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="2:30 PM"
+                  name="submit_6"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="4:30 PM"
+                  name="submit_6"
+                  class="showtimes-shows-selection"
+                />
+                <input type="text" name="time_6" id="time_6" hidden />
+                <input type="text" name="date_6" id="date_6" hidden />
+              </div>
+            </form>
           </div>
         </div>
         <div class="showtimes-halls" id="spiderman">
@@ -427,50 +462,59 @@
                 />
               </a>
             </div>
-            <div class="showtimes-shows-details">
-              <h2 class="showtimes-shows-title">Spider-Man: No Way Home</h2>
-              <div class="showtimes-shows-class-and-duration">
-                <p class="showtimes-shows-classification">PG-13</p>
-                <p class="showtimes-shows-duration">148 minutes</p>
+            <form
+              action="php/retrieve-seats.php"
+              name="form_7"
+              class="showtimes-shows-form"
+              method="post"
+            >
+              <div class="showtimes-shows-details">
+                <input
+                  type="text"
+                  name="movie_7"
+                  id="movie_7"
+                  class="showtimes-shows-title"
+                  value="Spider-Man: No Way Home"
+                  readonly
+                  onfocus="this.blur()"
+                />
+                <div class="showtimes-shows-class-and-duration">
+                  <p class="showtimes-shows-classification">PG-13</p>
+                  <p class="showtimes-shows-duration">148 minutes</p>
+                </div>
+                <p class="showtimes-shows-rating">
+                  Rating: 8.3 / 10 <em>(IMDb)</em>
+                </p>
               </div>
-              <p class="showtimes-shows-rating">
-                Rating: 8.3 / 10 <em>(IMDb)</em>
-              </p>
-            </div>
-            <div class="showtimes-shows-timing">
-              <input
-                type="submit"
-                value="10:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="12:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="2:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="4:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="text"
-                name="showtimes-shows-selection"
-                id="showtimes-shows-selection"
-                hidden
-              />
-              <input
-                type="text"
-                name="showtimes-shows-date"
-                id="showtimes-shows-date"
-                hidden
-              />
-            </div>
+              <div class="showtimes-shows-timing">
+                <input
+                  type="submit"
+                  value="10:30 AM"
+                  name="submit_7"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="12:30 AM"
+                  name="submit_7"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="2:30 PM"
+                  name="submit_7"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="4:30 PM"
+                  name="submit_7"
+                  class="showtimes-shows-selection"
+                />
+                <input type="text" name="time_7" id="time_7" hidden />
+                <input type="text" name="date_7" id="date_7" hidden />
+              </div>
+            </form>
           </div>
         </div>
         <div class="showtimes-halls" id="thor">
@@ -488,50 +532,59 @@
                 />
               </a>
             </div>
-            <div class="showtimes-shows-details">
-              <h2 class="showtimes-shows-title">Thor: Love and Thunder</h2>
-              <div class="showtimes-shows-class-and-duration">
-                <p class="showtimes-shows-classification">PG-13</p>
-                <p class="showtimes-shows-duration">119 minutes</p>
+            <form
+              action="php/retrieve-seats.php"
+              name="form_8"
+              class="showtimes-shows-form"
+              method="post"
+            >
+              <div class="showtimes-shows-details">
+                <input
+                  type="text"
+                  name="movie_8"
+                  id="movie_8"
+                  class="showtimes-shows-title"
+                  value="Thor: Love and Thunder"
+                  readonly
+                  onfocus="this.blur()"
+                />
+                <div class="showtimes-shows-class-and-duration">
+                  <p class="showtimes-shows-classification">PG-13</p>
+                  <p class="showtimes-shows-duration">119 minutes</p>
+                </div>
+                <p class="showtimes-shows-rating">
+                  Rating: 6.4 / 10 <em>(IMDb)</em>
+                </p>
               </div>
-              <p class="showtimes-shows-rating">
-                Rating: 6.4 / 10 <em>(IMDb)</em>
-              </p>
-            </div>
-            <div class="showtimes-shows-timing">
-              <input
-                type="submit"
-                value="10:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="12:30 AM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="2:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="submit"
-                value="4:30 PM"
-                class="showtimes-shows-selection"
-              />
-              <input
-                type="text"
-                name="showtimes-shows-selection"
-                id="showtimes-shows-selection"
-                hidden
-              />
-              <input
-                type="text"
-                name="showtimes-shows-date"
-                id="showtimes-shows-date"
-                hidden
-              />
-            </div>
+              <div class="showtimes-shows-timing">
+                <input
+                  type="submit"
+                  value="10:30 AM"
+                  name="submit_8"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="12:30 AM"
+                  name="submit_8"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="2:30 PM"
+                  name="submit_8"
+                  class="showtimes-shows-selection"
+                />
+                <input
+                  type="submit"
+                  value="4:30 PM"
+                  name="submit_8"
+                  class="showtimes-shows-selection"
+                />
+                <input type="text" name="time_8" id="time_8" hidden />
+                <input type="text" name="date_8" id="date_8" hidden />
+              </div>
+            </form>
           </div>
         </div>
       </div>
