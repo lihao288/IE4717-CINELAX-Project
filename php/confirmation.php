@@ -67,6 +67,7 @@ for ($i = 0; $i < $num_results; $i++) {
   $movie = $row['Movie'];
   $date = $row['BookingDate'];
   $time = $row['BookingTime'];
+  $selectedSeats = $row['SelectedSeats'];
 }
 
 $payment = TRUE;
@@ -114,6 +115,19 @@ session_destroy();
           <span class="underline"><?php echo $date ?></span> at
           <span class="underline"><?php echo $time ?></span>. <br />
         </p>
+        <?php
+        $to = 'f32ee@localhost';
+        $subject = "Booking Confirmation #" . $orderID;
+        $message = "Thank you for booking movie from us! Below is your booking details: \n\n" .
+          "Movie: " . $movie . "\n" .
+          "Date of Movie: " . $date . "\n" .
+          "Time of Movie: " . $time . "\n" .
+          "Selected Seats: " . $selectedSeats . "\n\n" .
+          "If you want to check or cancel your booking on our site, please login using your name and email address. Thank you!";
+        $headers = 'From:f31ee@localhost' . "\r\n" . 'Reply-To:f32ee@localhost' . "\r\n" . 'X-Mailer:PHP/' . phpversion();
+        mail($to, $subject, $message, $headers, '-ff32ee@localhost');
+        // echo ("mailsentto:" . $to);
+        ?>
         <p>
           A confirmation e-mail has been sent to your inbox. Please refer to
           the e-mail for more information or make changes to your booking.
