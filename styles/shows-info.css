@@ -25,6 +25,11 @@
   text-decoration: none;
   background-color: var(--bg-color-light);
   color: var(--text-color);
+  transition: 0.2s ease-in-out;
+}
+
+.shows-back-button:hover {
+  background-color: var(--bg-color);
 }
 
 .shows-movie-title {
@@ -42,6 +47,12 @@
   border: none;
   border-radius: 5px;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.shows-buy-ticket:hover {
+  background-color: #21325e;
+  color: var(--text-color);
 }
 
 .shows-details {
