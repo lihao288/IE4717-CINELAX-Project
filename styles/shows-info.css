@@ -105,13 +105,13 @@
 }
 
 .gallery-images {
-  padding: 10px 0;
+  padding: 30px 0;
 }
 
 .gallery-images img {
   width: 250px;
   height: 150px;
-  margin: 0 10px;
+  /* margin: 0 10px; */
   object-fit: cover;
 }
 
