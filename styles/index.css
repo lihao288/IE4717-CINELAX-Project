@@ -1,5 +1,10 @@
 @import url(basic-design.css);
 
+body,
+html {
+  height: 100%;
+}
+
 .home-container {
   max-width: 95%;
   padding: 0 20px;
@@ -12,20 +17,64 @@
   padding: 20px;
 }
 
-.home-hero-section img {
-  width: 100%;
+#hero {
+  width: 90vw;
+  height: 100vh;
+  background: url("../movie\ images\ &\ videos/cinema.jpg") no-repeat center /
+    cover;
+  color: var(--text-color);
+}
+
+.home-hero-section {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.home-hero-text {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.home-hero-section .home-hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-hero-section .home-hero-text h3 {
+  margin-bottom: 2rem;
+}
+
+.home-hero-section .home-hero-text a {
+  text-decoration: none;
+  display: inline-block;
+  /* background-color: var(--bg-color-accent); */
+  border: 1px solid var(--bg-color-accent);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 0.5em 2em;
+  margin-top: 2rem;
+  color: var(--text-color);
+  transition: 0.2s ease-in-out;
+}
+
+.home-hero-section .home-hero-text a:hover {
+  background-color: var(--bg-color-accent);
+  color: var(--bg-color);
 }
 
 .home-tab {
   display: flex;
   align-items: center;
-  color: var(--text-color);
+  margin: 30px 0;
   padding: 20px 0;
+  cursor: default;
 }
 
-.home-tab a {
-  text-decoration: none;
-  color: var(--text-color);
+.home-tab h1 {
+  color: var(--bg-color);
   padding: 10px 30px;
 }
 
@@ -47,7 +96,7 @@
 }
 
 .home-card {
-  max-width: 250px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -84,7 +133,7 @@
 }
 
 .home-duration {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .home-buy-ticket {
@@ -96,6 +145,12 @@
   border: none;
   border-radius: 5px;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.home-buy-ticket:hover {
+  background-color: #21325e;
+  color: var(--text-color);
 }
 
 .btn .selected {
