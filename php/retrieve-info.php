@@ -47,7 +47,7 @@ $count = 0;
 <body>
   <header>
     <nav>
-      <h1 class="nav-heading">Cinelax</h1>
+      <a href="../index.html" class="nav-heading">Cinelax</a>
       <div class="nav-links">
         <a href="../index.html">Home</a>
         <a href="../showtimes.html">Showtimes</a>
