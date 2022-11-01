@@ -12,6 +12,7 @@ if (!$db) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+// Get the selected movie and its respective name, time and date
 for ($i = 0; $i < 8; $i++) {
   if (isset($_POST["submit_" . ($i + 1)])) {
     $movie = $_POST["movie_" . ($i + 1)];
@@ -20,8 +21,7 @@ for ($i = 0; $i < 8; $i++) {
   }
 }
 
-
-
+// loop through to get the table name
 switch ($movie) {
   case 'Ant-Man':
     $tableName = 'ant_man';

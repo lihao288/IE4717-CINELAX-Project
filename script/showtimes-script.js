@@ -1,24 +1,32 @@
+// Get all the date selection components
 const firstDate = document.querySelector(".showtimes-date-1");
 const secondDate = document.querySelector(".showtimes-date-2");
 const thirdDate = document.querySelector(".showtimes-date-3");
 const leftArrow = document.querySelector(".showtimes-date-leftarrow");
 const rightArrow = document.querySelector(".showtimes-date-rightarrow");
-
 const dateSelectionContainer = document.querySelector(".showtimes-date");
 const dateSelection = document.querySelectorAll(".showtimes-timing");
 
+// Get the inidividual movie's time selection
 const timeSelectionContainer = document.querySelectorAll(
   ".showtimes-shows-timing"
 );
 
+// Initialize the varibale to store the selected items
 var movieName;
 var timeSelected;
 var dateSelected;
 
+// Seat count
 var count = 0;
+
+// Get today's date
 const today = new Date();
+
+// boolean flag to indicate whether the seat is selected
 var isSelected = false;
 
+// This function is to calculate the future date with respect to the current date
 function calculateDate() {
   var dateOne = new Date();
   dateOne.setDate(dateOne.getDate() + count);
@@ -27,22 +35,27 @@ function calculateDate() {
   var dateThree = new Date(dateOne);
   dateThree.setDate(dateThree.getDate() + 2);
 
+  // To prevent user to select a date earlier than the current date
   if (dateOne < today) {
     alert("Cannot select a date that is earlier than today");
     count = 0;
     dateOne.setDate(today.getDate());
 
+    // Add 1 day to the first date
     dateTwo = new Date(dateOne);
     dateTwo.setDate(dateTwo.getDate() + 1);
 
+    // Ad 2 days to the first date
     dateThree = new Date(dateOne);
     dateThree.setDate(dateThree.getDate() + 2);
   }
+  // Set the content
   firstDate.innerHTML = dateOne.toDateString();
   secondDate.innerHTML = dateTwo.toDateString();
   thirdDate.innerHTML = dateThree.toDateString();
 }
 
+// Get currently selected date
 function getSelectedDate() {
   var localDate = localStorage.getItem("Date");
   dateSelection.forEach((date) => {
@@ -53,6 +66,7 @@ function getSelectedDate() {
   });
 }
 
+// Check if a date is selected
 function checkDateSelection(e) {
   dateSelection.forEach((date) => {
     if (date.classList.contains("selected")) {
@@ -71,6 +85,7 @@ function checkDateSelection(e) {
 calculateDate();
 localStorage.setItem("Date", today.toDateString());
 
+// Add event listeners to left and right arrows
 leftArrow.addEventListener("click", () => {
   count--;
   calculateDate();
@@ -82,6 +97,7 @@ rightArrow.addEventListener("click", () => {
   getSelectedDate();
 });
 
+// Add event handlers to date selection
 dateSelectionContainer.addEventListener("click", (e) => {
   if (
     e.target.classList.contains("showtimes-date-1") ||
@@ -96,6 +112,7 @@ dateSelectionContainer.addEventListener("click", (e) => {
   }
 });
 
+// Add event handlers to time selection
 timeSelectionContainer.forEach((timeSelection) => {
   timeSelection.addEventListener("click", (e) => {
     if (e.target.classList.contains("showtimes-shows-selection")) {
@@ -124,25 +141,3 @@ timeSelectionContainer.forEach((timeSelection) => {
     }
   });
 });
-
-// // When the user scrolls the page, execute stickyFunc
-// window.onscroll = function () {
-//   stickyFunc();
-// };
-
-// // Get the navbar
-// var navbar = document.getElementById("navbar");
-
-// // Get the offset position of the navbar
-// var sticky = dateSelectionContainer.offsetTop;
-
-// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function stickyFunc() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky");
-//     dateSelectionContainer.classList.add("sticky");
-//   } else {
-//     navbar.classList.remove("sticky");
-//     dateSelectionContainer.classList.remove("sticky");
-//   }
-// }

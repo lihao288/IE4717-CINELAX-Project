@@ -1,3 +1,4 @@
+// Get the HTML elements
 const container = document.querySelector(".ticket-seating-plan-container");
 const seats = document.querySelectorAll(
   ".ticket-seat-row .ticket-seat:not(.occupied):not(.not-available)"
@@ -6,16 +7,19 @@ const count = document.getElementById("seat-count");
 const seatNumber = document.getElementById("ticket-cinema-seat-selected");
 var seatNumberList = [];
 
+// Get all the input value that user has selected
 const date = document.getElementById("ticket-date-selected");
 const hall = document.getElementById("ticket-cinema-hall-selected");
 const time = document.getElementById("ticket-time-selected");
 const movie = document.getElementById("movie-name");
 const moviePoster = document.getElementById("movie-poster");
 
+// Initialize the price of the ticket
 const totalAmount = document.getElementById("ticket-price");
 const ticketPrice = 10.5;
 const convenienceFee = 2.0;
 
+// Get the input box of the customer details
 const customerName = document.getElementById("customer-name");
 const customerMobile = document.getElementById("customer-mobileno");
 const customerEmail = document.getElementById("customer-email");
