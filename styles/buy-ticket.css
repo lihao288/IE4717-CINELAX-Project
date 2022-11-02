@@ -250,6 +250,12 @@ label {
   border-radius: 10px;
   background-color: var(--bg-color-accent);
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.payment-button:hover {
+  color: var(--text-color);
+  background-color: #2c2e43;
 }
 
 .information {

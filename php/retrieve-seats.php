@@ -51,7 +51,7 @@ switch ($movie) {
 
 $selectedSeats = array();
 
-$query = "SELECT * FROM " . $tableName . " WHERE BookingDate = '" . $date . "' AND BookingTime = '" . $time . "';";
+$query = "SELECT * FROM " . $tableName . " WHERE BookingDate = '" . $date . "' AND BookingTime = '" . $time . "' AND PaymentDone = 1;";
 $stmt = $db->prepare($query);
 $stmt->execute();
 
