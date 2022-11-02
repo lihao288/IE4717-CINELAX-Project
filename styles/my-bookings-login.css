@@ -51,6 +51,22 @@ form {
   flex-direction: column;
 }
 
+label {
+  padding: 5px 0;
+}
+
+input[type="text"] {
+  padding: 5px 10px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--text-color);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-family: inherit;
+  font-size: inherit;
+}
+
 .login-button {
   width: 15%;
   border: none;

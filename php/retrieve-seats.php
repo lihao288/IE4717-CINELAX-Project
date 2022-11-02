@@ -268,13 +268,13 @@ if ($num_results > 0) {
             <h3 class="ticket-customer-info-heading">Customer Information</h3>
             <div class="ticket-customer-info">
               <label for="customer-name" class="customer-name">Name: </label>
-              <input type="text" name="customer-name" id="customer-name" class="customer-name" required />
+              <input type="text" name="customer-name" id="customer-name" class="customer-name" placeholder="Your name here" required />
               <label for="customer-mobileno" class="customer-mobileno">Mobile-No:
               </label>
-              <input type="text" name="customer-mobileno" id="customer-mobileno" class="customer-mobileno" required />
+              <input type="text" name="customer-mobileno" id="customer-mobileno" class="customer-mobileno" placeholder="Your phone number here" required />
               <label for="customer-email" class="customer-email">Email:
               </label>
-              <input type="email" name="customer-email" id="customer-email" class="customer-email" required />
+              <input type="email" name="customer-email" id="customer-email" class="customer-email" placeholder="Your email here" required />
             </div>
 
             <input type="submit" value="Proceed to Payment" class="payment-button" />
