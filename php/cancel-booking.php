@@ -59,7 +59,7 @@ $count = $_SESSION['count'];
         $selectedOrderID = $_POST["orderID_" . ($i + 1) . ""];
         $selectedMovie = $_POST["movie_" . ($i + 1) . ""];
         $count--;
-        echo $count;
+        // echo $count;
         $_SESSION['count'] = $count;
 
         switch ($selectedMovie) {
