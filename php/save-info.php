@@ -16,7 +16,7 @@ session_start();
 $servername = "localhost";
 $username = "f32ee";
 $password = "f32ee";
-$dbname = "cinemalax";
+$dbname = "cinelax";
 
 $movie = $_POST['movie-name'];
 $date = $_POST['ticket-date-selected'];

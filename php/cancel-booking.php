@@ -15,7 +15,7 @@ session_start();
 $servername = "localhost";
 $username = "f32ee";
 $password = "f32ee";
-$dbname = "cinemalax";
+$dbname = "cinelax";
 
 $inputName = $_SESSION['inputName'];
 $inputEmail = $_SESSION['inputEmail'];

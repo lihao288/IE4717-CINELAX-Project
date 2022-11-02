@@ -15,7 +15,7 @@ session_start();
 $servername = "localhost";
 $username = "f32ee";
 $password = "f32ee";
-$dbname = "cinemalax";
+$dbname = "cinelax";
 
 if (!isset($_POST['customer-name']) || !isset($_POST['customer-email'])) {
   echo "No info has been given.";

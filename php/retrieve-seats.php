@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "f32ee";
 $password = "f32ee";
-$dbname = "cinemalax";
+$dbname = "cinelax";
 
 // Create connection
 @$db = new mysqli($servername, $username, $password, $dbname);

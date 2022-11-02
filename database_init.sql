@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS cinemalax;
+CREATE DATABASE IF NOT EXISTS cinelax;
 
-USE cinemalax;
+USE cinelax;
 
 DROP TABLE IF EXISTS ant_man;
 DROP TABLE IF EXISTS black_panther;
