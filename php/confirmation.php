@@ -123,7 +123,7 @@ session_destroy();
           "Date of Movie: " . $date . "\n" .
           "Time of Movie: " . $time . "\n" .
           "Selected Seats: " . $selectedSeats . "\n\n" .
-          "If you want to check or cancel your booking, please login using your name and e-mail address on our website.\n\n Thank you!";
+          "If you want to check or cancel your booking, please login using your name and e-mail address on our website." . "\n\n" . "Thank you!";
         $headers = 'From:f31ee@localhost' . "\r\n" . 'Reply-To:f32ee@localhost' . "\r\n" . 'X-Mailer:PHP/' . phpversion();
         mail($to, $subject, $message, $headers, '-ff32ee@localhost');
         // echo ("mailsentto:" . $to);
