@@ -118,12 +118,12 @@ session_destroy();
         <?php
         $to = 'f32ee@localhost';
         $subject = "Booking Confirmation #" . $orderID;
-        $message = "Thank you for booking movie from us! Below is your booking details: \n\n" .
+        $message = "Thank you for booking a movie with us! Please review your booking details: \n\n" .
           "Movie: " . $movie . "\n" .
           "Date of Movie: " . $date . "\n" .
           "Time of Movie: " . $time . "\n" .
           "Selected Seats: " . $selectedSeats . "\n\n" .
-          "If you want to check or cancel your booking on our site, please login using your name and email address. Thank you!";
+          "If you want to check or cancel your booking, please login using your name and e-mail address on our website.\n\n Thank you!";
         $headers = 'From:f31ee@localhost' . "\r\n" . 'Reply-To:f32ee@localhost' . "\r\n" . 'X-Mailer:PHP/' . phpversion();
         mail($to, $subject, $message, $headers, '-ff32ee@localhost');
         // echo ("mailsentto:" . $to);
